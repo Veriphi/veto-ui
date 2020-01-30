@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card } from './Card';
+import { Card } from '.';
 import { Box } from '../Core';
 
 export default {

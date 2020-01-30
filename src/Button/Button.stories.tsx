@@ -2,11 +2,7 @@ import * as React from 'react';
 import { Button } from '.';
 
 export default {
-  title: 'Welcome',
+  title: 'Button',
 };
 
-export const toStorybook = () => <Button />;
-
-toStorybook.story = {
-  name: 'to Storybook',
-};
+export const button = () => <Button variant="primary">Click me!</Button>;

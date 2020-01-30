@@ -19,6 +19,15 @@ const colors = {
 export default {
   ...shared,
   colors,
+  buttons: {
+    outline: {
+      background: colors.white,
+    },
+    primary: {
+      background: colors.primary,
+      border: 'none',
+    },
+  },
   cards: {
     normal: {
       background: colors.white,
