@@ -1,5 +1,6 @@
-import * as React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 
-const Button = () => <button>lol button</button>;
+const Button = () => <button css={{ background: 'red' }}>lol button</button>;
 
 export { Button };
