@@ -18,4 +18,12 @@ export default {
     success: '#49b169',
     warning: '#ffc137',
   },
+  cards: {
+    muted: {
+      background: '#cacaca',
+    },
+    colorful: {
+      background: 'pink',
+    },
+  },
 };
