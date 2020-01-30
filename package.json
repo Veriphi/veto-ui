@@ -54,5 +54,9 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "dependencies": {
+    "@types/styled-system": "^5.1.5",
+    "@types/styled-system__css": "^5.0.4"
   }
 }
