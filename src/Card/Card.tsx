@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import css from '@styled-system/css';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'muted' | 'colorful' | 'normal';
+  variant?: 'primary' | 'secondary' | 'normal';
 }
 const Card: React.FC<Props> = ({
   children,
