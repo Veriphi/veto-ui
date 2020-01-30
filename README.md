@@ -1,10 +1,21 @@
 # Veto UI
 
-Home of the future component library for Veriphy
+Home of the future component library for Veriphi
 
-## Quickstart
+## Installing
 
 ```
-yarn
+yarn @veriphi/veto-ui @emotion/core @emotion/styled emotion-theming
+```
+
+## Contributing 
+
+### Development
+
+Storybook is used for development purposes.
+
+Simply run the following:
+
+```
 yarn storybook
 ```
