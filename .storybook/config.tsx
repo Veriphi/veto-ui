@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'emotion-theming';
-import { lightTheme, darkTheme, Box } from '../src';
+import { lightTheme, darkTheme, Box, GlobalStyles } from '../src';
 
 const ThemeSwitcher: React.FC = ({ children }) => {
   const [state, setState] = React.useState(
@@ -9,6 +9,7 @@ const ThemeSwitcher: React.FC = ({ children }) => {
   );
   return (
     <ThemeProvider theme={state === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles />
       <Box mb={2}>
         <select
           value={state}

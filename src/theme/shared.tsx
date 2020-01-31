@@ -13,7 +13,7 @@ export default {
   fontSizes: {
     large: '1.25rem',
     normal: '1rem',
-    small: '0.875rem',
+    small: '0.8rem',
   },
   shadows: {
     boxShadow: [

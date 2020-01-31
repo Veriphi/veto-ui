@@ -1,4 +1,7 @@
+import * as React from 'react';
 import styled from '@emotion/styled';
+import { Global  } from '@emotion/core';
+import { useTheme } from 'emotion-theming';
 
 import {
   space,
@@ -43,7 +46,10 @@ const borderRadii = system({
   },
 });
 
-const border = compose(borderRadii, styledSystemBorder);
+const border = compose(
+  borderRadii,
+  styledSystemBorder
+);
 
 interface BoxProps
   extends SpaceProps,
@@ -54,7 +60,13 @@ interface BoxProps
   color?: string;
 }
 const Box = styled('div')<BoxProps>(
-  compose(space, layout, border, color, flexbox)
+  compose(
+    space,
+    layout,
+    border,
+    color,
+    flexbox
+  )
 );
 
 const Flex = styled(Box)<BoxProps>({
@@ -65,4 +77,19 @@ const Grid = styled(Box)<BoxProps & GridProps>(grid, {
   display: 'grid',
 });
 
-export { Box, Flex, Grid };
+const GlobalStyles = () => {
+  const theme: any = useTheme();
+
+  return (
+    <Global
+      styles={{
+        body: {
+          fontFamily: theme?.fontFamily['sans-serif'],
+          fontSize: '16px',
+        },
+      }}
+    />
+  );
+};
+
+export { Box, Flex, Grid, GlobalStyles };

@@ -14,9 +14,12 @@ const Button: React.FC<Props> = ({
     css={css({
       WebkitAppearance: 'none',
       borderRadius: 'radius-1',
+      fontFamily: 'sans-serif',
+      fontSize: 'small',
       px: 2,
       py: 2,
-      minWidth: '148px',
+      letterSpacing: '0.5px',
+      minWidth: '168px',
       cursor: 'pointer',
       textTransform: 'uppercase',
       variant: `buttons.${variant}`,
