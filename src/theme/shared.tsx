@@ -16,13 +16,11 @@ export default {
     small: '0.8rem',
   },
   shadows: {
-    boxShadow: [
-      '0 0.0625rem 0.125rem rgba(12, 13, 13, 0.15)',
-      '0 0.125rem 0.25rem rgba(12, 13, 13, 0.15)',
-      '0 0.1875rem 0.375rem rgba(12, 13, 13, 0.15)',
-      '0 0.375rem 0.75rem rgba(12, 13, 13, 0.15)',
-      '0 0.75rem 1.5rem rgba(12, 13, 13, 0.15)',
-    ],
+    boxShadow: {
+      button: '0 3px 2em 0.5px rgba(0,0,0,0.10)',
+      card: '0 0.25em 0.375em rgba(0,0,0,0.2)',
+      nav: '0 0 0.5em rgba(0,0,0,0.15)',
+    },
     innerShadow: [
       'inset 0 0.0625rem 0.125rem rgba(56, 61, 61, 0.1)',
       'inset 0 0 0.375rem rgba(12, 13, 13, 0.18)',

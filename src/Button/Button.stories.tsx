@@ -16,5 +16,9 @@ export const button = () => (
     <Button variant="secondary">Request Payment</Button>
     <h2>Danger Button</h2>
     <Button variant="danger">Close Channel</Button>
+    <h2>White Button</h2>
+    <Button variant="white">Request Payment</Button>
+    <h2>Dark Button</h2>
+    <Button variant="dark">Request Payment</Button>
   </Box>
 );

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import css from '@styled-system/css';
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
-  variant?: 'outline' | 'primary' | 'secondary' | 'danger';
+  variant?: 'outline' | 'primary' | 'secondary' | 'danger' | 'white' | 'dark';
 }
 const Button: React.FC<Props> = ({
   variant = 'outline',

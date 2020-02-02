@@ -1,63 +1,81 @@
 import shared from './shared';
 
 const colors = {
-  primary: '#3A79DA',
-  secondary: '#403d4d',
-  tertiary: '#a4a1b1',
-  white: '#fdfbff',
-  mainBg: '#fdfbff',
-  secondaryBg: '#f8f6fa',
-  danger: '#EB4037',
-  dangerBg: '#fdecf0',
-  vetoOrange: '#f5932f',
-  textHeading: '#0e0b11',
-  black: '#0e0b11',
-  textBody: '#a4a1b1',
-  success: '#49b169',
+  primary: '#f5932f',
+  secondary: '#2378e1',
+  light: '#f3f1f5',
+  greyLight: '#a4a1b1',
+  grey: '#686575',
+  greyDark: '#403d4d',
+  dark: '#0e0b11',
+  confirm: '#49ba69',
+  cancel: '#ff2729',
   warning: '#ffc137',
+  message: '#2378e1',
+  veriphiPrimary: '#f5932f',
+  veriphiSecondary: '#2b345d',
+  bg: ['#fcfcfd', '#f4f5f5', '#ecedee'],
+  text: '#111213',
+  textGrey: '#111213',
+  textFade: '#b3b7bc',
 };
 export default {
   ...shared,
   colors,
   buttons: {
     outline: {
-      background: colors.white,
+      background: colors.bg[0],
       border: '1px solid',
-      borderColor: '#C0BEC3',
+      borderColor: '#2F292B',
     },
     primary: {
-      color: colors.white,
-      background: colors.primary,
+      color: 'white',
+      background: colors.secondary,
+      boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
     },
     secondary: {
-      color: colors.white,
-      background: colors.secondary,
+      color: 'white',
+      background: colors.greyLight,
+      boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
     },
     danger: {
-      color: colors.white,
-      background: colors.danger,
+      color: 'white',
+      background: colors.cancel,
+      boxShadow: shared.shadows.boxShadow.button,
+      border: 'none',
+    },
+    white: {
+      background: '#fcfcfd',
+      boxShadow: shared.shadows.boxShadow.button,
+      border: 'none',
+    },
+    dark: {
+      color: 'white',
+      background: colors.greyDark,
+      boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
     },
   },
   cards: {
     normal: {
-      background: colors.white,
-      boxShadow:
-        '0 0 0 1px rgba(0, 0, 0, 0.06), 0 6px 12px 0 rgba(0, 0, 0, 0.03), 0 4px 8px 0 rgba(0, 0, 0, 0.08)',
+      background: colors.bg[0],
+      boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     primary: {
-      color: colors.white,
-      background: colors.primary,
-      boxShadow:
-        '0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 6px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.1)',
+      color: 'white',
+      background: colors.secondary,
+      boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     secondary: {
-      color: colors.white,
-      background: colors.secondary,
-      boxShadow:
-        '0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 6px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.1)',
+      color: 'white',
+      background: colors.greyDark,
+      boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
+    },
+    inset: {
+      background: colors.bg[1],
+      boxShadow: 'none',
     },
   },
 };

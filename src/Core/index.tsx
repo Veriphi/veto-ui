@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { Global  } from '@emotion/core';
+import { Global } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 
 import {
@@ -46,10 +46,7 @@ const borderRadii = system({
   },
 });
 
-const border = compose(
-  borderRadii,
-  styledSystemBorder
-);
+const border = compose(borderRadii, styledSystemBorder);
 
 interface BoxProps
   extends SpaceProps,
@@ -60,13 +57,7 @@ interface BoxProps
   color?: string;
 }
 const Box = styled('div')<BoxProps>(
-  compose(
-    space,
-    layout,
-    border,
-    color,
-    flexbox
-  )
+  compose(space, layout, border, color, flexbox)
 );
 
 const Flex = styled(Box)<BoxProps>({
