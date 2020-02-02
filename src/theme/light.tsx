@@ -66,7 +66,7 @@ export default {
   },
   inputs: {
     normal: {
-      borderColor: colors.greyLight,
+      borderColor: '#E7E6E7',
     },
     valid: {
       borderColor: colors.confirm,
