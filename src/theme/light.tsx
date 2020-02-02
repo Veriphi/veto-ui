@@ -57,6 +57,26 @@ export default {
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
     },
+    veto: {
+      color: 'white',
+      background: colors.primary,
+      boxShadow: shared.shadows.boxShadow.button,
+      border: 'none',
+    },
+  },
+  inputs: {
+    normal: {
+      borderColor: colors.greyLight,
+    },
+    valid: {
+      borderColor: colors.confirm,
+    },
+    warning: {
+      borderColor: colors.warning,
+    },
+    error: {
+      borderColor: colors.cancel,
+    },
   },
   cards: {
     normal: {

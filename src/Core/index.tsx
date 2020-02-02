@@ -76,7 +76,8 @@ const GlobalStyles = () => {
       styles={{
         body: {
           fontFamily: theme?.fontFamily['sans-serif'],
-          fontSize: '16px',
+          fontSize: '14px',
+          backgroundColor: theme.colors.bg[0],
         },
       }}
     />
