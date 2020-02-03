@@ -76,8 +76,10 @@ const GlobalStyles = () => {
       styles={{
         body: {
           fontFamily: theme?.fontFamily['sans-serif'],
-          fontSize: '14px',
+          fontSize: '16px',
           backgroundColor: theme.colors.bg[0],
+          '-webkit-font-smoothing': 'antialiased',
+          '-moz-osx-font-smoothing': 'grayscale',
         },
       }}
     />

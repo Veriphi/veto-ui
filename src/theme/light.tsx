@@ -98,4 +98,21 @@ export default {
       boxShadow: 'none',
     },
   },
+  texts: {
+    heading1: {
+      fontWeight: 'lighter',
+      color: colors.greyLight,
+      fontSize: '3.2rem',
+    },
+    heading2: {
+      fontWeight: 400,
+      color: colors.secondary,
+      fontSize: '1.8rem',
+    },
+    heading3: {
+      fontWeight: 600,
+      color: colors.primary,
+      fontSize: '1.4rem',
+    },
+  },
 };
