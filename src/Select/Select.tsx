@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Box } from '../Core';
 
-const Select: React.FC<React.HTMLProps<HTMLSelectElement>> = ({
+const Select: React.FC<React.HTMLAttributes<HTMLSelectElement>> = ({
   children,
   ...restProps
 }) => (
   <Box
-    // @ts-ignore
     as="select"
     __css={theme => ({
       appearance: 'none',

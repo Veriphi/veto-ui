@@ -23,7 +23,7 @@ const sx = (props: SxProps) => css(props.sx)(props.theme);
 type BaseProps = { theme?: any; __css?: SystemStyleObject };
 const base = (props: BaseProps) => css(props.__css)(props.theme);
 
-interface BoxProps
+export interface BoxProps
   extends SpaceProps,
     FlexboxProps,
     LayoutProps,

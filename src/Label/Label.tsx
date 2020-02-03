@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Box } from '../Core';
 
-interface Props extends React.HTMLProps<HTMLLabelElement> {}
+interface Props extends React.HTMLAttributes<HTMLLabelElement> {}
 const Label: React.FC<Props> = ({ children, ...restProps }) => (
   <Box
-    // @ts-ignore
     as="label"
     __css={{
       color: 'secondary',

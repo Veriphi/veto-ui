@@ -1,20 +1,23 @@
 import shared from './shared';
 
 const colors = {
-  primary: '#2378e1',
-  secondary: '#403d4d',
-  tertiary: '#a4a1b1',
-  white: '#fdfbff',
-  mainBg: '#fdfbff',
-  secondaryBg: '#f8f6fa',
-  danger: '#ff2729',
-  dangerBg: '#fdecf0',
-  vetoOrange: '#f5932f',
-  textHeading: '#0e0b11',
-  black: '#0e0b11',
-  textBody: '#a4a1b1',
-  success: '#49b169',
+  primary: '#f5932f',
+  secondary: '#2378e1',
+  light: '#f3f1f5',
+  greyLight: '#a4a1b1',
+  grey: '#686575',
+  greyDark: '#403d4d',
+  dark: '#0e0b11',
+  confirm: '#49ba69',
+  cancel: '#ff2729',
   warning: '#ffc137',
+  message: '#2378e1',
+  veriphiPrimary: '#f5932f',
+  veriphiSecondary: '#2b345d',
+  bg: ['#fcfcfd', '#f4f5f5', '#ecedee'],
+  text: '#111213',
+  textGrey: '#111213',
+  textFade: '#b3b7bc',
 };
 
 export default {
