@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import css from '@styled-system/css';
+import * as React from 'react';
+import { Box } from '../Core';
 
 interface Props extends React.HTMLProps<HTMLInputElement> {
   variant?: 'normal' | 'valid' | 'warning' | 'error';
@@ -10,9 +9,11 @@ const Input: React.FC<Props> = ({
   variant = 'normal',
   ...restProps
 }) => (
-  <input
+  <Box
+    // @ts-ignore
+    as="input"
     type={type}
-    css={css({
+    __css={{
       p: 2,
       bg: 'bg.0',
       fontSize: 'normal',
@@ -25,7 +26,7 @@ const Input: React.FC<Props> = ({
       '&::placeholder': {
         fontSize: 'small',
       },
-    })}
+    }}
     {...restProps}
   />
 );

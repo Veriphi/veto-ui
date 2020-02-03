@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import css from '@styled-system/css';
+import * as React from 'react';
+import { Box } from '../Core';
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   variant?: 'outline' | 'primary' | 'secondary' | 'danger' | 'white' | 'dark';
@@ -10,8 +9,9 @@ const Button: React.FC<Props> = ({
   children,
   ...restProps
 }) => (
-  <button
-    css={css({
+  <Box
+    as="button"
+    __css={{
       WebkitAppearance: 'none',
       borderRadius: 'radius-1',
       fontFamily: 'sans-serif',
@@ -23,11 +23,11 @@ const Button: React.FC<Props> = ({
       cursor: 'pointer',
       textTransform: 'uppercase',
       variant: `buttons.${variant}`,
-    })}
+    }}
     {...restProps}
   >
     {children}
-  </button>
+  </Box>
 );
 
 export { Button };

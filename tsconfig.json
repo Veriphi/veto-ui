@@ -1,6 +1,10 @@
 {
   "include": ["src", "types"],
-  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx"],
+  "exclude": [
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
+    "src/**/Icons/*.tsx"
+  ],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",

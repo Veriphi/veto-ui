@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import css from '@styled-system/css';
+import * as React from 'react';
+import { Box } from '../Core';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'primary' | 'secondary' | 'normal' | 'inset';
@@ -10,17 +9,17 @@ const Card: React.FC<Props> = ({
   variant = 'normal',
   ...restProps
 }) => (
-  <div
-    css={css({
+  <Box
+    __css={{
       px: 8,
       py: 6,
       borderRadius: 'radius-2',
       variant: `cards.${variant}`,
-    })}
+    }}
     {...restProps}
   >
     {children}
-  </div>
+  </Box>
 );
 
 export { Card };

@@ -1,8 +1,7 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import css from '@styled-system/css';
+import * as React from 'react';
+import { Box } from '../Core';
 
-interface Props extends React.HTMLProps<HTMLDivElement> {
+interface Props extends React.HTMLProps<HTMLParagraphElement> {
   variant?: string;
 }
 const Text: React.FC<Props> = ({
@@ -10,14 +9,15 @@ const Text: React.FC<Props> = ({
   children,
   ...restProps
 }) => (
-  <div
-    css={css({
+  // @ts-ignore
+  <Box
+    __css={{
       variant: `texts.${variant}`,
-    })}
+    }}
     {...restProps}
   >
     {children}
-  </div>
+  </Box>
 );
 
 export { Text };

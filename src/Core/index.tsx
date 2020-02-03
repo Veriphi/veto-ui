@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { Global } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
+import css, { SystemStyleObject, CSSObject } from '@styled-system/css';
 
 import {
   space,
@@ -15,49 +16,35 @@ import {
   grid,
   GridProps,
   compose,
-  system,
-  border as styledSystemBorder,
-  BorderProps as StyledSystemBorderProps,
 } from 'styled-system';
 
-export interface BorderProps extends StyledSystemBorderProps {
-  borderTopLeftRadius?: string | number;
-  borderTopRightRadius?: string | number;
-  borderBottomLeftRadius?: string | number;
-  borderBottomRightRadius?: string | number;
-}
-
-const borderRadii = system({
-  borderTopLeftRadius: {
-    property: 'borderTopLeftRadius',
-    scale: 'radii',
-  },
-  borderTopRightRadius: {
-    property: 'borderTopRightRadius',
-    scale: 'radii',
-  },
-  borderBottomLeftRadius: {
-    property: 'borderBottomLeftRadius',
-    scale: 'radii',
-  },
-  borderBottomRightRadius: {
-    property: 'borderBottomRightRadius',
-    scale: 'radii',
-  },
-});
-
-const border = compose(borderRadii, styledSystemBorder);
+type SxProps = { theme?: any; sx?: SystemStyleObject };
+const sx = (props: SxProps) => css(props.sx)(props.theme);
+type BaseProps = { theme?: any; __css?: SystemStyleObject };
+const base = (props: BaseProps) => css(props.__css)(props.theme);
 
 interface BoxProps
   extends SpaceProps,
     FlexboxProps,
     LayoutProps,
-    BorderProps,
     Omit<ColorProps, 'color'> {
+  as?: React.ElementType;
   color?: string;
+  sx?: SystemStyleObject;
+  __css?: SystemStyleObject;
 }
-const Box = styled('div')<BoxProps>(
-  compose(space, layout, border, color, flexbox)
+type CssFunctionType = { css?: CSSObject; theme?: any };
+
+const Box = styled<'div' | 'button' | 'input' | 'label' | 'select'>('div')<
+  BoxProps
+>(
+  base,
+  sx,
+  (props: CssFunctionType) => props.css,
+  // Seriously prettier?
+  /* prettier-ignore */
+  compose(space, layout, color, flexbox)
+  /* prettier-ignore */
 );
 
 const Flex = styled(Box)<BoxProps>({
@@ -75,11 +62,11 @@ const GlobalStyles = () => {
     <Global
       styles={{
         body: {
-          fontFamily: theme?.fontFamily['sans-serif'],
+          fontFamily: theme.fontFamily['sans-serif'],
           fontSize: '16px',
           backgroundColor: theme.colors.bg[0],
-          '-webkit-font-smoothing': 'antialiased',
-          '-moz-osx-font-smoothing': 'grayscale',
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
         },
       }}
     />

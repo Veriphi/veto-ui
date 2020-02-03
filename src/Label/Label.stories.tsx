@@ -14,10 +14,10 @@ export const label = () => (
     <h2>Manually assembling a form field</h2>
     <Flex flexDirection="column">
       <Box mb={1} ml={2}>
-        <Label>Label</Label>
+        <Label htmlFor="channel">Label</Label>
       </Box>
       <div>
-        <Input placeholder="Channel label..." />
+        <Input id="channel" placeholder="Channel label..." />
       </div>
     </Flex>
   </div>

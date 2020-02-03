@@ -1,20 +1,21 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import css from '@styled-system/css';
+import * as React from 'react';
+import { Box } from '../Core';
 
 interface Props extends React.HTMLProps<HTMLLabelElement> {}
 const Label: React.FC<Props> = ({ children, ...restProps }) => (
-  <label
-    css={css({
+  <Box
+    // @ts-ignore
+    as="label"
+    __css={{
       color: 'secondary',
       fontSize: 'small',
       fontWeight: '600',
       textTransform: 'uppercase',
-    })}
+    }}
     {...restProps}
   >
     {children}
-  </label>
+  </Box>
 );
 
 export { Label };
