@@ -17,7 +17,8 @@ export default {
   },
   shadows: {
     boxShadow: {
-      button: '0 3px 2em 0.5px rgba(0,0,0,0.10)',
+      button: '0 4px 8px -1px rgba(0,0,0,0.3)',
+      buttonHover: '0 4px 8px -3px rgba(0,0,0,0.3)',
       card: '0 0.25em 0.375em rgba(0,0,0,0.2)',
       nav: '0 0 0.5em rgba(0,0,0,0.15)',
     },

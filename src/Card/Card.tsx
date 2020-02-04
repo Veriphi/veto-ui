@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Box, BoxProps } from '../Core';
 
 interface Props extends BoxProps {
-  variant?: 'primary' | 'secondary' | 'normal' | 'inset';
+  variant?: 'primary' | 'normal' | 'inset';
 }
 
 const Card = styled(Box)<Props>();

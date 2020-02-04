@@ -24,42 +24,61 @@ export default {
   colors,
   buttons: {
     outline: {
-      background: colors.bg[0],
+      background: '#fcfcfd',
       border: '1px solid',
-      borderColor: '#2F292B',
+      borderColor: '#AFADBA',
+      color: '#A3A1B0',
     },
     primary: {
       color: 'white',
-      background: colors.secondary,
+      background: '#2378e1',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
+      transition: `all ${shared.transition.base} ease-in-out`,
+      '&:hover': {
+        background: '#4681D9',
+        boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
     },
     secondary: {
       color: 'white',
-      background: colors.greyLight,
+      background: '#a4a1b1',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
+      '&:hover': {
+        boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
     },
     danger: {
       color: 'white',
-      background: colors.cancel,
+      background: '#ff2729',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
+      '&:hover': {
+        boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
     },
     white: {
-      background: '#fcfcfd',
+      background: 'rgb(252, 252, 253)',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
+      '&:hover': {
+        background: 'rgb(252, 252, 253, 0.8)',
+      },
     },
     dark: {
       color: 'white',
-      background: colors.greyDark,
+      background: '#403d4d',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
+      '&:hover': {
+        boxShadow: shared.shadows.boxShadow.buttonHover,
+        background: '#4D4B59',
+      },
     },
     veto: {
       color: 'white',
-      background: colors.primary,
+      background: '#f5932f',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
     },
@@ -69,13 +88,13 @@ export default {
       borderColor: '#E7E6E7',
     },
     valid: {
-      borderColor: colors.confirm,
+      borderColor: '#49ba69',
     },
     warning: {
-      borderColor: colors.warning,
+      borderColor: '#ffc137',
     },
     error: {
-      borderColor: colors.cancel,
+      borderColor: '#ff2729',
     },
   },
   cards: {
@@ -85,16 +104,11 @@ export default {
     },
     primary: {
       color: 'white',
-      background: colors.secondary,
-      boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
-    },
-    secondary: {
-      color: 'white',
-      background: colors.greyDark,
+      background: '#2378e1',
       boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     inset: {
-      background: colors.bg[1],
+      background: '#fcfcfd',
       boxShadow: 'none',
     },
   },
@@ -112,6 +126,21 @@ export default {
     heading3: {
       fontWeight: 600,
       color: colors.primary,
+      fontSize: '1.4rem',
+    },
+    cardHeading: {
+      fontWeight: 600,
+      color: '#A3A1B0',
+      fontSize: '1.4rem',
+    },
+    cardPrimaryHeading: {
+      fontWeight: 600,
+      color: '#0D0B11',
+      fontSize: '1.4rem',
+    },
+    cardInsetHeading: {
+      fontWeight: 600,
+      color: '#A3A1B0',
       fontSize: '1.4rem',
     },
   },

@@ -9,7 +9,7 @@ Button.defaultProps = {
   as: 'button',
   tx: 'buttons',
   variant: 'outline',
-  __css: {
+  __css: theme => ({
     WebkitAppearance: 'none',
     borderRadius: 'radius-1',
     fontFamily: 'sans-serif',
@@ -20,7 +20,8 @@ Button.defaultProps = {
     minWidth: '168px',
     cursor: 'pointer',
     textTransform: 'uppercase',
-  },
+    transition: `all ${theme.transition.base} ease-in-out`,
+  }),
 };
 
 export { Button };
