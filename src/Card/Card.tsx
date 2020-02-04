@@ -1,25 +1,19 @@
-import * as React from 'react';
-import { Box } from '../Core';
+import styled from '@emotion/styled';
+import { Box, BoxProps } from '../Core';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends BoxProps {
   variant?: 'primary' | 'secondary' | 'normal' | 'inset';
 }
-const Card: React.FC<Props> = ({
-  children,
-  variant = 'normal',
-  ...restProps
-}) => (
-  <Box
-    __css={{
-      px: 8,
-      py: 6,
-      borderRadius: 'radius-2',
-      variant: `cards.${variant}`,
-    }}
-    {...restProps}
-  >
-    {children}
-  </Box>
-);
+
+const Card = styled(Box)<Props>();
+Card.defaultProps = {
+  __css: {
+    px: 8,
+    py: 6,
+    borderRadius: 'radius-2',
+  },
+  variant: 'normal',
+  tx: 'cards',
+};
 
 export { Card };

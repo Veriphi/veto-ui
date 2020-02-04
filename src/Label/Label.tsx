@@ -1,20 +1,15 @@
-import * as React from 'react';
-import { Box } from '../Core';
+import { Box, BoxProps } from '../Core';
+import styled from '@emotion/styled';
 
-interface Props extends React.HTMLAttributes<HTMLLabelElement> {}
-const Label: React.FC<Props> = ({ children, ...restProps }) => (
-  <Box
-    as="label"
-    __css={{
-      color: 'secondary',
-      fontSize: 'small',
-      fontWeight: '600',
-      textTransform: 'uppercase',
-    }}
-    {...restProps}
-  >
-    {children}
-  </Box>
-);
+interface Props extends BoxProps {}
+const Label = styled<'label'>(Box as any)<Props>();
+Label.defaultProps = {
+  __css: {
+    color: 'secondary',
+    fontSize: 'small',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+  },
+};
 
 export { Label };

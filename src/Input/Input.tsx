@@ -1,34 +1,29 @@
-import * as React from 'react';
-import { Box } from '../Core';
+import { Box, BoxProps } from '../Core';
+import styled from '@emotion/styled';
 
-interface Props extends React.HTMLProps<HTMLInputElement> {
+interface Props extends Omit<BoxProps, 'width' | 'height' | 'size'> {
   variant?: 'normal' | 'valid' | 'warning' | 'error';
 }
-const Input: React.FC<Props> = ({
-  type = 'text',
-  variant = 'normal',
-  ...restProps
-}) => (
-  <Box
-    // @ts-ignore
-    as="input"
-    type={type}
-    __css={{
-      p: 2,
-      bg: 'bg.0',
-      fontSize: 'normal',
-      fontFamily: 'sans-serif',
-      borderRadius: 'radius-1',
-      appearance: 'none',
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      variant: `inputs.${variant}`,
-      '&::placeholder': {
-        fontSize: 'small',
-      },
-    }}
-    {...restProps}
-  />
-);
+
+const Input = styled<'input'>(Box as any)<Props>();
+Input.defaultProps = {
+  as: 'input',
+  type: 'text',
+  __css: {
+    p: 2,
+    bg: 'bg.0',
+    fontSize: 'normal',
+    fontFamily: 'sans-serif',
+    borderRadius: 'radius-1',
+    appearance: 'none',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    '&::placeholder': {
+      fontSize: 'small',
+    },
+  },
+  tx: 'inputs',
+  variant: 'normal',
+};
 
 export { Input };

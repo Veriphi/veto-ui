@@ -2,7 +2,9 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { Global } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
-import css, { SystemStyleObject, CSSObject } from '@styled-system/css';
+import css, { get, SystemStyleObject, CSSObject } from '@styled-system/css';
+// @ts-ignore
+import shouldForwardProp from '@styled-system/should-forward-prop';
 
 import {
   space,
@@ -22,6 +24,10 @@ type SxProps = { theme?: any; sx?: SystemStyleObject };
 const sx = (props: SxProps) => css(props.sx)(props.theme);
 type BaseProps = { theme?: any; __css?: SystemStyleObject };
 const base = (props: BaseProps) => css(props.__css)(props.theme);
+type VariantProps = { theme?: any; variant?: string | string[]; tx?: string };
+const variant = ({ theme, variant, tx = 'variants' }: VariantProps) => {
+  return css(get(theme, tx + '.' + variant, get(theme, variant || '')))(theme);
+};
 
 export interface BoxProps
   extends SpaceProps,
@@ -31,14 +37,17 @@ export interface BoxProps
   as?: React.ElementType;
   color?: string;
   sx?: SystemStyleObject;
+  tx?: string;
+  variant?: string | string[];
   __css?: SystemStyleObject;
 }
 type CssFunctionType = { css?: CSSObject; theme?: any };
 
-const Box = styled<'div' | 'button' | 'input' | 'label' | 'select'>('div')<
-  BoxProps
->(
+const Box = styled<'div'>('div', {
+  shouldForwardProp,
+})<BoxProps>(
   base,
+  variant,
   sx,
   (props: CssFunctionType) => props.css,
   // Seriously prettier?
