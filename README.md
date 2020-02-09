@@ -5,7 +5,7 @@ Home of the future component library for Veriphi
 ## Installing
 
 ```
-yarn @veriphi/veto-ui emotion-theming @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+yarn @veriphi/veto-ui emotion-theming @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core
 ```
 
 Once the dependencies have been installed, you'll need to hook in the theme provider to the root of your application and add the GlobalStyles component
