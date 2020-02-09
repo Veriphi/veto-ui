@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, Props>(
   ({ variant, icon, children, ...restProps }, ref) => (
     <BaseButton ref={ref} variant={variant} {...restProps}>
       {children}
-      {icon && <FontAwesomeIcon icon={icon as any} />}
+      {icon && <FontAwesomeIcon icon={icon as any} size="sm" />}
     </BaseButton>
   )
 );
