@@ -2,6 +2,12 @@
 
 Home of the future component library for Veriphi
 
+### Playground
+
+Fork this CodeSandbox and start playing around with components:
+
+[![Edit Veto-UI Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/awesome-brahmagupta-rjmz1)
+
 ## Installing
 
 ```
@@ -38,11 +44,11 @@ Simply add the following to the `<head>` of your application.
 
 ## TODO
 
-- [] Dark Mode
-- [] Modal
-- [] Tooltip
-- [] Select component with custom dropdown
-- [] Sliding Menu
+- [ ] Dark Mode
+- [ ] Modal
+- [ ] Tooltip
+- [ ] Select component with custom dropdown
+- [ ] Sliding Menu
 
 ## Contributing
 
