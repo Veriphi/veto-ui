@@ -20,6 +20,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
     "@storybook/addons": "^5.3.9",
@@ -39,7 +41,9 @@
   },
   "peerDependencies": {
     "emotion-theming": ">=10",
-    "react": ">=16"
+    "react": ">=16",
+    "@fortawesome/free-solid-svg-icons": ">=5",
+    "@fortawesome/react-fontawesome": ">=0.1"
   },
   "husky": {
     "hooks": {

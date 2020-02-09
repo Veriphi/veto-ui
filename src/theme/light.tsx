@@ -108,7 +108,7 @@ export default {
       boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     inset: {
-      background: '#fcfcfd',
+      background: '#F8F6FA',
       boxShadow: 'none',
     },
   },

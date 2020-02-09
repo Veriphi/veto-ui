@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button } from '.';
 import { Box } from '../Core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 
 export default {
   title: 'Button',
@@ -9,9 +10,11 @@ export default {
 export const button = () => (
   <Box>
     <h2>Outline Button (default)</h2>
-    <Button>Export CSV</Button>
+    <Button icon={faCheck}>Export CSV</Button>
     <h2>Primary Button</h2>
-    <Button variant="primary">Send payment</Button>
+    <Button variant="primary" icon={faCheck}>
+      Send payment
+    </Button>
     <h2>Secondary Button</h2>
     <Button variant="secondary">Request Payment</Button>
     <h2>Danger Button</h2>

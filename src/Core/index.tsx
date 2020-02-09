@@ -43,7 +43,7 @@ export interface BoxProps
 }
 type CssFunctionType = { css?: CSSObject; theme?: any };
 
-const Box = styled<'div'>('div', {
+const Box = styled('div', {
   shouldForwardProp,
 })<BoxProps>(
   base,
