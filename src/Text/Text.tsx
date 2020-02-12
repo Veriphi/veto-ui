@@ -1,23 +1,14 @@
 import * as React from 'react';
-import { Box } from '../Core';
+import styled from '@emotion/styled';
+import { Box, BoxProps } from '../Core';
 
 interface Props extends React.HTMLProps<HTMLParagraphElement> {
   variant?: string;
 }
-const Text: React.FC<Props> = ({
-  variant = 'normal',
-  children,
-  ...restProps
-}) => (
-  // @ts-ignore
-  <Box
-    __css={{
-      variant: `texts.${variant}`,
-    }}
-    {...restProps}
-  >
-    {children}
-  </Box>
-);
+const Text = styled(Box)<Props & BoxProps>();
+Text.defaultProps = {
+  variant: 'normal',
+  tx: 'texts',
+};
 
 export { Text };

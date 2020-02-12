@@ -4,6 +4,7 @@ import { Card } from './Card';
 import { Box, Flex, Grid, GlobalStyles } from './Core';
 import { Input } from './Input';
 import { Label } from './Label';
+import { Modal } from './Modal';
 import { Select } from './Select';
 import { Switch } from './Switch';
 import { Text } from './Text';
@@ -20,6 +21,7 @@ export {
   GlobalStyles,
   Input,
   Label,
+  Modal,
   Select,
   Switch,
   Text,

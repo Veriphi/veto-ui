@@ -1,16 +1,25 @@
 import * as React from 'react';
-import { Box } from '../Core';
+import { Box, BoxProps } from '../Core';
 import { Input } from '../Input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 
-interface Props {
+interface Props
+  extends BoxProps,
+    Omit<
+      React.HTMLProps<HTMLInputElement>,
+      'height' | 'width' | 'size' | 'as'
+    > {
   checked?: boolean;
 }
-const Switch: React.FC<Props> = ({ checked }) => (
+const Switch = React.forwardRef<
+  HTMLInputElement,
+  Omit<Props, 'variant' | 'height' | 'width' | 'size'>
+>(({ checked, sx, ...restProps }, ref) => (
   <Box
     as="label"
+    sx={sx}
     __css={{
       position: 'relative',
       display: 'inline-block',
@@ -21,6 +30,8 @@ const Switch: React.FC<Props> = ({ checked }) => (
       type="checkbox"
       checked={checked}
       value={checked ? 1 : 0}
+      ref={ref}
+      {...restProps}
       __css={{
         opacity: 0,
         position: 'absolute',
@@ -111,6 +122,6 @@ const Switch: React.FC<Props> = ({ checked }) => (
       ></Box>
     </Box>
   </Box>
-);
+));
 
 export { Switch };

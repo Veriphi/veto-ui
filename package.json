@@ -21,8 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@emotion/babel-preset-css-prop": "^10.0.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
@@ -42,11 +42,11 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "emotion-theming": ">=10",
-    "react": ">=16",
+    "@fortawesome/fontawesome-svg-core": ">=1",
     "@fortawesome/free-solid-svg-icons": ">=5",
     "@fortawesome/react-fontawesome": ">=0.1",
-    "@fortawesome/fontawesome-svg-core": ">=1"
+    "emotion-theming": ">=10",
+    "react": ">=16"
   },
   "husky": {
     "hooks": {
@@ -64,8 +64,10 @@
     "@emotion/styled": "^10.0.27",
     "@styled-system/css": "^5.1.4",
     "@styled-system/should-forward-prop": "^5.1.4",
+    "@types/react-modal": "^3.10.4",
     "@types/styled-system": "^5.1.5",
     "@types/styled-system__css": "^5.0.4",
+    "react-modal": "^3.11.1",
     "styled-system": "^5.1.4"
   }
 }

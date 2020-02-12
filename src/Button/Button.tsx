@@ -36,13 +36,14 @@ BaseButton.defaultProps = {
   }),
 };
 
-const Button = React.forwardRef<HTMLButtonElement, Props>(
-  ({ variant, icon, children, ...restProps }, ref) => (
-    <BaseButton ref={ref} variant={variant} {...restProps}>
-      {children}
-      {icon && <FontAwesomeIcon icon={icon as any} size="sm" />}
-    </BaseButton>
-  )
-);
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  Props & React.HTMLAttributes<HTMLButtonElement>
+>(({ variant, icon, children, ...restProps }, ref) => (
+  <BaseButton type="button" ref={ref} variant={variant} {...restProps}>
+    {children}
+    {icon && <FontAwesomeIcon icon={icon as any} size="sm" />}
+  </BaseButton>
+));
 
 export { Button };
