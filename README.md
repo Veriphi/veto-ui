@@ -11,7 +11,7 @@ Fork this CodeSandbox and start playing around with components:
 ## Installing
 
 ```
-yarn @veriphi/veto-ui emotion-theming @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core
+yarn add @veriphi/veto-ui emotion-theming @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core
 ```
 
 Once the dependencies have been installed, you'll need to hook in the theme provider to the root of your application and add the GlobalStyles component
