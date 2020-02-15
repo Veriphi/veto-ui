@@ -38,7 +38,7 @@ BaseButton.defaultProps = {
 
 const Button = React.forwardRef<
   HTMLButtonElement,
-  Props & React.HTMLAttributes<HTMLButtonElement>
+  Props & React.ComponentProps<'button'>
 >(({ variant, icon, children, ...restProps }, ref) => (
   <BaseButton type="button" ref={ref} variant={variant} {...restProps}>
     {children}
