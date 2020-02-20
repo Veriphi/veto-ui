@@ -7,7 +7,6 @@ const TooltipArrow = styled('span')`
   width: 10px;
   height: 10px;
   position: absolute;
-
   &::after,
   &::before {
     content: ' ';
@@ -17,7 +16,6 @@ const TooltipArrow = styled('span')`
     height: 10px;
     position: absolute;
     transform: rotate(45deg);
-    background: hotpink;
   }
 `;
 
@@ -60,19 +58,19 @@ const Tooltip: React.FC<Props> = ({
       </Box>
       <Box
         ref={container}
+        tx="tooltips"
+        variant="normal"
         sx={{
           position: 'absolute',
           top: 0,
           left: 0,
-          background: 'hotpink',
           padding: '5px 10px',
           borderRadius: 'radius-1',
           pointerEvents: 'none',
-          zIndex: 1,
+          zIndex: 4,
           opacity: isHovered ? 1 : 0,
           visibility: isHovered ? 'visible' : 'hidden',
-          transition: 'opacity ease-in-out',
-          transitionDuration: '100ms',
+          transition: 'opacity ease-in-out 100ms, visibility ease-in-out 200ms',
           "&[data-popper-placement^='right'] > [data-popper-arrow]": {
             left: '-4px',
           },
@@ -87,7 +85,7 @@ const Tooltip: React.FC<Props> = ({
           },
         }}
       >
-        <TooltipArrow data-popper-arrow />
+        <TooltipArrow data-popper-arrow className="veto-tooltip-arrow" />
         {content}
       </Box>
     </React.Fragment>

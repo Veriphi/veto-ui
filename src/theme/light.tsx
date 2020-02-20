@@ -112,6 +112,15 @@ export default {
       boxShadow: 'none',
     },
   },
+  tooltips: {
+    normal: {
+      background: colors.greyDark,
+      color: '#fff',
+      '.veto-tooltip-arrow::after, .veto-tooltip-arrow::before': {
+        background: colors.greyDark,
+      },
+    },
+  },
   texts: {
     heading1: {
       fontWeight: 'lighter',
