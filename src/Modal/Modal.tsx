@@ -25,28 +25,28 @@ const Modal: React.FC<Props> = ({
       className={aside ? 'VetoModalAside' : 'VetoModal'}
       ariaHideApp={false}
     >
-      <Button
-        onClick={onClickCloseButton}
-        __css={theme => ({
-          position: 'absolute',
-          ...(aside
-            ? {
-                left: theme.space[2],
-              }
-            : {
-                right: theme.space[5],
-              }),
-          top: theme.space[6],
-        })}
-        sx={{
-          border: 'none',
-          appearance: 'none',
-          cursor: 'pointer',
-        }}
-      >
-        <FontAwesomeIcon icon={faTimes} size="2x" />
-      </Button>
-      <Box m={aside ? 7 : 5} minWidth="300px">
+      <Box m={aside ? 7 : 5} minWidth="300px" sx={{ position: 'relative' }}>
+        <Button
+          onClick={onClickCloseButton}
+          __css={theme => ({
+            position: 'absolute',
+            ...(aside
+              ? {
+                  left: '-25px',
+                }
+              : {
+                  right: theme.space[2],
+                  top: '12px',
+                }),
+          })}
+          sx={{
+            border: 'none',
+            appearance: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <FontAwesomeIcon icon={faTimes} size="2x" />
+        </Button>
         {title && (
           <Box
             sx={{
