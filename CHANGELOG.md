@@ -9,7 +9,9 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
-- Basic Tooltip
+- Basic Tooltip component
+- Modal: New aside prop and animations
+- Ultra basic TextLink component
 
 ## 0.2.0 - 2020-02-15
 

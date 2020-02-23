@@ -1,6 +1,8 @@
 # Veto UI
 
-Home of the future component library for Veriphi
+Veto's React component library.
+
+Built with emotion and styled-system.
 
 ### Playground
 
@@ -9,6 +11,10 @@ Fork this CodeSandbox and start playing around with components:
 [![Edit Veto-UI Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/awesome-brahmagupta-rjmz1)
 
 ## Installing
+
+Please follow each steps carefully, or else some components might look completely off!
+
+### Hooking the theme provider and theme values
 
 ```
 yarn add @veriphi/veto-ui emotion-theming @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core
@@ -29,7 +35,7 @@ const App = () => (
 );
 ```
 
-## Adding the required font
+### Adding the required font
 
 Veto-ui relies on having Source Sans Pro installed.
 
@@ -45,10 +51,11 @@ Simply add the following to the `<head>` of your application.
 ## TODO
 
 - [ ] Dark Mode
-- [ ] Modal
-- [ ] Tooltip
+- [x] Modal
+- [x] Tooltip
 - [ ] Select component with custom dropdown
 - [ ] Sliding Menu
+- [ ] Docs docs docs
 
 ## Contributing
 
