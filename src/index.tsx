@@ -7,8 +7,9 @@ import { Label } from './Label';
 import { Modal } from './Modal';
 import { Select } from './Select';
 import { Switch } from './Switch';
-import { Text } from './Text';
+import { Text, TextLink } from './Text';
 import { Textarea } from './Textarea';
+import { Tooltip } from './Tooltip';
 import { lightTheme, darkTheme } from './theme';
 
 export {
@@ -25,7 +26,9 @@ export {
   Select,
   Switch,
   Text,
+  TextLink,
   Textarea,
+  Tooltip,
   lightTheme,
   darkTheme,
 };

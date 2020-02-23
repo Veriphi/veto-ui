@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { Modal } from '.';
 import { Box, Flex } from '../Core';
+import { Card } from '../Card';
 import { Button } from '../Button';
-import { Text } from '../Text';
+import { Text, TextLink } from '../Text';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { faCube } from '@fortawesome/free-solid-svg-icons/faCube';
 
 export default {
   title: 'Modal',
@@ -16,8 +19,9 @@ export const modal = () => {
 
   return (
     <Box>
+      <button onClick={() => setIsOpen(s => !s)}>open modal</button>
       <Modal
-        title="Lightning Payment"
+        title={<Text variant="heading1">Lightning Payment</Text>}
         isOpen={modalIsOpen}
         onClickCloseButton={() => setIsOpen(s => !s)}
       >
@@ -130,6 +134,59 @@ export const modal = () => {
             Send Payment
           </Button>
         </Flex>
+      </Modal>
+    </Box>
+  );
+};
+
+export const modalAside = () => {
+  // eslint-disable-next-line
+  const [modalIsOpen, setIsOpen] = React.useState(true);
+
+  return (
+    <Box>
+      <button onClick={() => setIsOpen(s => !s)}>open modal</button>
+      <Modal
+        aside
+        title={
+          <Text variant="heading2" sx={{ textTransform: 'uppercase' }}>
+            Notifications
+          </Text>
+        }
+        isOpen={modalIsOpen}
+        onClickCloseButton={() => setIsOpen(s => !s)}
+      >
+        <Card variant="inset" sx={{ width: '400px', p: 3 }}>
+          <Flex justifyContent="space-between" mb={3}>
+            <Flex justifyContent="flex-end" alignItems="center">
+              <FontAwesomeIcon icon={faTimes} size="sm" color="#C0BDC8" />
+              <TextLink
+                href="#"
+                sx={{ fontSize: 'small', color: '#C0BDC8', ml: 1 }}
+              >
+                Dismiss
+              </TextLink>
+            </Flex>
+            <Text sx={{ fontSize: 'small', color: '#C0BDC8' }}>
+              03/06/2020 14:17 UTC
+            </Text>
+          </Flex>
+          <Flex justifyContent="flex-end">
+            <div>
+              <Text sx={{ fontWeight: 'bold' }}>Incoming transaction</Text>
+              <Text>1.25 BTC - Cold Card #2</Text>
+              <Flex justifyContent="flex-end" alignItems="center">
+                <TextLink
+                  href="#"
+                  sx={{ fontSize: 'small', color: 'black', mr: 1 }}
+                >
+                  View transaction
+                </TextLink>
+                <FontAwesomeIcon icon={faCube} size="sm" />
+              </Flex>
+            </div>
+          </Flex>
+        </Card>
       </Modal>
     </Box>
   );
