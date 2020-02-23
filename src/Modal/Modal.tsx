@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { Button } from '../Button';
 import { Box } from '../Core';
-import { Text } from '../Text';
 
 interface Props {
-  title?: string;
+  title?: React.ReactNode;
   aside?: boolean;
   isOpen: boolean;
   onClickCloseButton: () => void;
@@ -47,10 +46,9 @@ const Modal: React.FC<Props> = ({
       >
         <FontAwesomeIcon icon={faTimes} size="2x" />
       </Button>
-      <Box m={5} minWidth="300px">
+      <Box m={aside ? 7 : 5} minWidth="300px">
         {title && (
-          <Text
-            variant="heading2"
+          <Box
             sx={{
               mb: 4,
               ...(aside
@@ -63,7 +61,7 @@ const Modal: React.FC<Props> = ({
             }}
           >
             {title}
-          </Text>
+          </Box>
         )}
         {children}
       </Box>
