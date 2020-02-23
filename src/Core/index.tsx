@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Global } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 import css, { get, SystemStyleObject, CSSObject } from '@styled-system/css';
+import { modalStyles } from '../Modal/modal.styles';
 // @ts-ignore
 import shouldForwardProp from '@styled-system/should-forward-prop';
 
@@ -66,6 +67,7 @@ const Grid = styled(Box)<BoxProps & GridProps>(grid, {
 
 const GlobalStyles = () => {
   const theme: any = useTheme();
+  const modalCss = modalStyles(theme);
 
   return (
     <Global
@@ -77,18 +79,7 @@ const GlobalStyles = () => {
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         },
-        '.VetoModal': {
-          boxShadow: theme.cards.normal.boxShadow,
-          background: theme.cards.normal.background,
-          width: 'fit-content',
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          '&:focus': {
-            outline: 'none',
-          },
-        },
+        ...modalCss,
       }}
     />
   );
