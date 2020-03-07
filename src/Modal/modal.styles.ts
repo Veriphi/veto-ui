@@ -38,8 +38,8 @@ const asideHideKeyframe = keyframes`
 
 const modalStyles = (theme: any): CSSObject => ({
   '.VetoModal': {
-    boxShadow: theme.cards.normal.boxShadow,
-    background: theme.cards.normal.background,
+    boxShadow: theme.cards?.normal?.boxShadow,
+    background: theme.cards?.normal?.background,
     width: 'fit-content',
     position: 'absolute',
     top: '50%',
