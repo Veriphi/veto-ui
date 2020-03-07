@@ -1,15 +1,13 @@
 import * as React from 'react';
-import { Box } from '../Core';
-import { Text } from '../Text';
-import { Card } from '../Card';
-import { Button } from '../Button';
+import { Box, BoxProps } from '../../Core';
+import { Text } from '../../Text';
 
 export default {
-  title: 'channels',
+  title: 'patterns/channels',
 };
 
 const ChannelTitle: React.FC<{ sub?: string }> = ({ sub, children }) => (
-  <Text sx={{ fontSize: '1.55rem', fontWeight: 'bold' }}>
+  <Text sx={{ fontSize: '2rem', fontWeight: 'bold' }}>
     {children}
     <Text as="span" sx={{ fontSize: 'small', fontWeight: 'normal', ml: '2px' }}>
       {sub}
@@ -17,7 +15,7 @@ const ChannelTitle: React.FC<{ sub?: string }> = ({ sub, children }) => (
   </Text>
 );
 
-interface ChannelBoxProps {
+interface ChannelBoxProps extends BoxProps {
   supTitle: string;
   subTitle: string;
   title: React.ReactNode;
@@ -27,14 +25,15 @@ const ChannelBox: React.FC<ChannelBoxProps> = ({
   subTitle,
   title,
   children,
+  ...restProps
 }) => (
-  <Box>
+  <Box {...restProps}>
     <Text
       variant="cardInsetHeading"
       sx={{
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        fontSize: 'small',
+        fontSize: 'normal',
         mb: 1,
       }}
     >
@@ -49,8 +48,8 @@ const ChannelBox: React.FC<ChannelBoxProps> = ({
     </Box>
     <Text
       sx={{
-        color: 'textFade',
-        fontSize: 'small',
+        color: 'grey',
+        fontSize: 'normal',
         mb: 1,
       }}
     >
@@ -59,14 +58,5 @@ const ChannelBox: React.FC<ChannelBoxProps> = ({
     {children}
   </Box>
 );
-export const channelBox = () => (
-  <Card variant="inset" sx={{ width: 'fit-content', display: 'flex' }}>
-    <ChannelBox
-      supTitle="On Chain Balance"
-      subTitle="~0.07$"
-      title={<ChannelTitle sub="BTC">0.00000615</ChannelTitle>}
-    >
-      <Button variant="primary">Deposit</Button>
-    </ChannelBox>
-  </Card>
-);
+
+export { ChannelBox, ChannelTitle };
