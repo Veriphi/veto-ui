@@ -42,12 +42,14 @@ const modalStyles = (theme: any): CSSObject => ({
     background: theme.cards?.normal?.background,
     width: 'fit-content',
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
     '&:focus': {
       outline: 'none',
     },
+  },
+  '.ReactModal__Overlay': {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   '.ReactModal__Content--after-open': {
     animation: `${showKeyframe} 200ms cubic-bezier(0, 0, 0.2, 1) forwards`,

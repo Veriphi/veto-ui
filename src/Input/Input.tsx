@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Box, Flex, BoxProps } from '../Core';
+import { SystemStyleObject } from '@styled-system/css';
 import styled from '@emotion/styled';
+import { Box, Flex, BoxProps } from '../Core';
 
 interface Props extends Omit<BoxProps, 'width' | 'height' | 'size'> {
   variant?: 'normal' | 'valid' | 'warning' | 'error';
@@ -31,11 +32,11 @@ Input.defaultProps = {
 
 interface InputWithAddonProps extends Props, React.ComponentProps<'input'> {
   addon: React.ReactNode;
-  addonProps?: BoxProps;
+  addonSx?: SystemStyleObject;
 }
 const InputWithAddon: React.FC<InputWithAddonProps> = ({
   addon,
-  addonProps,
+  addonSx,
   variant = 'normal',
   ...restProps
 }) => (
@@ -62,8 +63,8 @@ const InputWithAddon: React.FC<InputWithAddonProps> = ({
         borderBottomRightRadius: 'radius-1',
         borderWidth: '1px',
         borderStyle: 'solid',
+        ...addonSx,
       }}
-      {...addonProps}
     >
       {addon}
     </Box>

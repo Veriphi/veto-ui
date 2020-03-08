@@ -1,35 +1,46 @@
 import * as React from 'react';
+import { SystemStyleObject } from '@styled-system/css';
 import { Label } from '../Label';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
-import { Box, Flex, BoxProps } from '../Core';
+import { Box, Flex } from '../Core';
 
-interface Props extends BoxProps {
-  label: string;
+interface Props {
+  label?: string;
   id?: string;
-  name?: string;
   helperText?: string;
   tooltipContent?: React.ReactNode;
+  sx?: SystemStyleObject;
 }
 const FormField: React.FC<Props> = ({
   id,
-  name,
   label,
   tooltipContent,
   helperText,
+  sx,
   children,
   ...restProps
 }) => {
   let nextChildren = children;
 
   if (typeof children === 'function') {
-    nextChildren = React.cloneElement(children as any, { id, name });
+    nextChildren = React.cloneElement(children as any, {
+      id,
+      ...restProps,
+    });
   }
 
   return (
-    <Box mb={3} {...restProps}>
+    <Box mb={3} sx={sx}>
       <Flex alignItems="baseline">
-        <Label sx={{ ml: 3, mb: 1 }}>{label}</Label>
+        {label ? (
+          <Label sx={{ ml: 3, mb: 1 }} htmlFor={id}>
+            {label}
+          </Label>
+        ) : (
+          <Label sx={{ mb: 1 }}>&nbsp;</Label>
+        )}
+
         {helperText && (
           <Text sx={{ color: 'grey', fontSize: 'small' }}>
             &nbsp;{helperText}

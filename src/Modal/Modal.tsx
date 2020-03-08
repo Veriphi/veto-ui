@@ -26,7 +26,14 @@ const Modal: React.FC<Props> = ({
       className={aside ? 'VetoModalAside' : 'VetoModal'}
       ariaHideApp={false}
     >
-      <Box m={aside ? 7 : 5} minWidth="300px" sx={{ position: 'relative' }}>
+      <Box
+        m={aside ? 7 : 5}
+        minWidth="300px"
+        sx={{
+          position: 'relative',
+          willChange: 'auto',
+        }}
+      >
         <Button
           onClick={onClickCloseButton}
           __css={theme => ({
