@@ -18,6 +18,7 @@ Input.defaultProps = {
     appearance: 'none',
     borderWidth: '1px',
     borderStyle: 'solid',
+    width: '100%',
     '&::placeholder': {
       fontSize: 'small',
     },

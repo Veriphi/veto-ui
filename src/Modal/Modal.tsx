@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { Button } from '../Button';
+import { Text } from '../Text';
 import { Box } from '../Core';
 
 interface Props {
@@ -60,7 +61,11 @@ const Modal: React.FC<Props> = ({
                   }),
             }}
           >
-            {title}
+            {typeof title === 'string' ? (
+              <Text variant="heading1">{title}</Text>
+            ) : (
+              title
+            )}
           </Box>
         )}
         {children}

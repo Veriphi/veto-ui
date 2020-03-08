@@ -1,7 +1,7 @@
 import shared from './shared';
 
 const colors = {
-  primary: '#f5932f',
+  primary: '#2378e1',
   secondary: '#2378e1',
   light: '#f3f1f5',
   greyLight: '#a4a1b1',
@@ -130,12 +130,12 @@ export default {
     },
     heading2: {
       fontWeight: 400,
-      color: colors.secondary,
+      color: 'primary',
       fontSize: '1.8rem',
     },
     heading3: {
       fontWeight: 600,
-      color: colors.primary,
+      color: 'veriphiPrimary',
       fontSize: '1.4rem',
     },
     cardHeading: {
