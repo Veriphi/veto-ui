@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { Button } from '../Button';
+import { Text } from '../Text';
 import { Box } from '../Core';
 
 interface Props {
@@ -25,7 +26,14 @@ const Modal: React.FC<Props> = ({
       className={aside ? 'VetoModalAside' : 'VetoModal'}
       ariaHideApp={false}
     >
-      <Box m={aside ? 7 : 5} minWidth="300px" sx={{ position: 'relative' }}>
+      <Box
+        m={aside ? 7 : 5}
+        minWidth="300px"
+        sx={{
+          position: 'relative',
+          willChange: 'auto',
+        }}
+      >
         <Button
           onClick={onClickCloseButton}
           __css={theme => ({
@@ -60,7 +68,11 @@ const Modal: React.FC<Props> = ({
                   }),
             }}
           >
-            {title}
+            {typeof title === 'string' ? (
+              <Text variant="heading1">{title}</Text>
+            ) : (
+              title
+            )}
           </Box>
         )}
         {children}

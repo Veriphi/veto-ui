@@ -23,7 +23,6 @@ Table.defaultProps = {
     'tbody td': {
       px: 2,
       py: 1,
-      fontSize: 'small',
     },
   },
 };

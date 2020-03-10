@@ -72,6 +72,9 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={{
+        '*, *:before, *:after': {
+          boxSizing: 'border-box',
+        },
         body: {
           fontFamily: theme.fontFamily['sans-serif'],
           fontSize: '16px',

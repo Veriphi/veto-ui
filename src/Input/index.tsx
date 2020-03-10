@@ -1,3 +1,3 @@
-import { Input } from './Input';
+import { Input, InputWithAddon } from './Input';
 
-export { Input };
+export { Input, InputWithAddon };
