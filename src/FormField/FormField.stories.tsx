@@ -62,10 +62,10 @@ export const formField = () => (
           <FormField sx={{ width: '33.3333%' }}>
             <InputWithAddon
               defaultValue="1"
-              addon="sats per byte"
+              addonRight="sats per byte"
               ml={2}
               width="35%"
-              addonSx={{ width: '65%' }}
+              addonSxRight={{ width: '65%' }}
             />
           </FormField>
           <Flex width={1 / 3} justifyContent="space-around">

@@ -30,45 +30,77 @@ Input.defaultProps = {
   variant: 'normal',
 };
 
+const commonAddonStyles = {
+  p: 2,
+  bg: 'bg.0',
+  color: 'grey',
+  fontSize: 'small',
+  lineHeight: 1.6,
+  borderWidth: '1px',
+  borderStyle: 'solid',
+};
 interface InputWithAddonProps extends Props, React.ComponentProps<'input'> {
-  addon: React.ReactNode;
-  addonSx?: SystemStyleObject;
+  addonRight?: React.ReactNode;
+  addonLeft?: React.ReactNode;
+  addonSxRight?: SystemStyleObject;
+  addonSxLeft?: SystemStyleObject;
 }
 const InputWithAddon: React.FC<InputWithAddonProps> = ({
-  addon,
-  addonSx,
+  addonSxRight,
+  addonSxLeft,
+  addonRight,
+  addonLeft,
   variant = 'normal',
   ...restProps
-}) => (
-  <Flex alignItems="center">
-    <Input
-      variant={variant}
-      sx={{
-        borderTopRightRadius: 0,
-        borderBottomRightRadius: 0,
-        borderRight: 0,
-      }}
-      {...restProps}
-    />
-    <Box
-      tx="inputs"
-      variant={variant}
-      sx={{
-        p: 2,
-        bg: 'bg.0',
-        color: 'grey',
-        fontSize: 'small',
-        lineHeight: 1.6,
-        borderTopRightRadius: 'radius-1',
-        borderBottomRightRadius: 'radius-1',
-        borderWidth: '1px',
-        borderStyle: 'solid',
-        ...addonSx,
-      }}
-    >
-      {addon}
-    </Box>
-  </Flex>
-);
+}) => {
+  return (
+    <Flex alignItems="center">
+      {addonLeft && (
+        <Box
+          tx="inputs"
+          variant={variant}
+          sx={{
+            borderTopLeftRadius: 'radius-1',
+            borderBottomLeftRadius: 'radius-1',
+            ...commonAddonStyles,
+            ...addonSxLeft,
+          }}
+        >
+          {addonLeft}
+        </Box>
+      )}
+      <Input
+        variant={variant}
+        sx={{
+          ...(addonRight && {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
+            borderRight: 0,
+          }),
+          ...(addonLeft && {
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+            borderLeft: 0,
+          }),
+        }}
+        {...restProps}
+      />
+      {addonRight && (
+        <Box
+          tx="inputs"
+          variant={variant}
+          sx={{
+            borderTopRightRadius: 'radius-1',
+            borderBottomRightRadius: 'radius-1',
+            ...commonAddonStyles,
+            ...addonSxRight,
+          }}
+        >
+          {addonRight}
+        </Box>
+      )}
+    </Flex>
+  );
+};
 
 export { Input, InputWithAddon };

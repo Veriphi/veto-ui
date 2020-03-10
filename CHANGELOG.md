@@ -15,7 +15,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Modal: New aside prop and animations
 - Ultra basic TextLink component
 - FormField Component
-- InputWithAddonComponent
+- InputWithAddon Component (use at own risk and peril)
 
 ### Breaking
 
