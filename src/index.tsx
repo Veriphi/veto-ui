@@ -5,6 +5,7 @@ import { Box, Flex, Grid, GlobalStyles } from './Core';
 import { FormField } from './FormField';
 import { Input } from './Input';
 import { Label } from './Label';
+import { MainNav } from './MainNav';
 import { Modal } from './Modal';
 import { Select } from './Select';
 import { Switch } from './Switch';
@@ -24,6 +25,7 @@ export {
   GlobalStyles,
   Input,
   Label,
+  MainNav,
   Modal,
   Select,
   Switch,

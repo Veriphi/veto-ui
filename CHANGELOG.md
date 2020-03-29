@@ -16,6 +16,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Ultra basic TextLink component
 - FormField Component
 - InputWithAddon Component (use at own risk and peril)
+- MainNav component
 
 ### Breaking
 
