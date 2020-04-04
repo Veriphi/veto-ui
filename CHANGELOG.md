@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 0.4.0
+
+### Added
+
+- NavigationElement will now be exported
+
 ## 0.3.0
 
 ### Added
