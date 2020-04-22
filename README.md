@@ -1,5 +1,7 @@
 # Veto UI
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9da2f961-5f35-49fb-b801-e32ef8654b08/deploy-status)](https://app.netlify.com/sites/veto-ui-storybook/deploys)
+
 Veto's React component library.
 
 Built with emotion and styled-system.
