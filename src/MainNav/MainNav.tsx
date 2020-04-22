@@ -16,11 +16,15 @@ const MainNav: React.FC<MainNavProps> = ({ navigations, children }) => {
   return (
     <MenuExpansionContext.Provider value={{ isExpanded }}>
       <Box
+        className="MainNav"
+        tx="mainnav"
+        variant="normal"
         sx={{
           paddingLeft: '80px',
         }}
       >
         <Box
+          className="MainNav__container"
           sx={{
             left: 0,
             position: 'fixed',
@@ -33,7 +37,7 @@ const MainNav: React.FC<MainNavProps> = ({ navigations, children }) => {
             boxShadow: isExpanded
               ? '10px 0px 30px #00000029'
               : '0 0 0.5em rgba(0,0,0,0.15)',
-            bg: 'white',
+            bg: 'bg.0',
             overflowX: 'hidden',
             transition:
               'transform ease-in-out 200ms, box-shadow ease-in-out 200ms',
@@ -127,12 +131,12 @@ const NavigationElement: React.FC<NavigationElement> = ({
         pr: 2,
         pl: '32px',
         position: 'relative',
-        bg: isSelected ? '#F8F6FA' : 'white',
+        bg: isSelected ? 'bg.1' : 'bg.0',
         cursor: 'pointer',
         color: 'text',
         textDecoration: 'none',
         '&:hover': {
-          bg: isSelected ? '#F8F6FA' : '#FAFAFA',
+          bg: 'bg.1',
         },
       }}
       {...restProps}

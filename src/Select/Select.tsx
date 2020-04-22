@@ -5,6 +5,8 @@ interface Props extends Omit<BoxProps, 'size'> {}
 const Select = styled<'select'>(Box as any)<Props>();
 Select.defaultProps = {
   as: 'select',
+  tx: 'select',
+  variant: 'normal',
   __css: (theme: any) => ({
     appearance: 'none',
     width: '100%',

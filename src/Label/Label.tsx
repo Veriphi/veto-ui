@@ -5,7 +5,7 @@ interface Props extends BoxProps {}
 const Label = styled<'label'>(Box as any)<Props>();
 Label.defaultProps = {
   __css: {
-    color: 'secondary',
+    color: 'primary',
     fontSize: 'small',
     fontWeight: '600',
     textTransform: 'uppercase',

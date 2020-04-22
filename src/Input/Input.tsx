@@ -33,7 +33,7 @@ Input.defaultProps = {
 const commonAddonStyles = {
   p: 2,
   bg: 'bg.0',
-  color: 'grey',
+  color: 'textGrey',
   fontSize: 'small',
   lineHeight: 1.6,
   borderWidth: '1px',

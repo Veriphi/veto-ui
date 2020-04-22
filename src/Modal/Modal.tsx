@@ -51,6 +51,7 @@ const Modal: React.FC<Props> = ({
             border: 'none',
             appearance: 'none',
             cursor: 'pointer',
+            background: 'transparent',
           }}
         >
           <FontAwesomeIcon icon={faTimes} size="2x" />

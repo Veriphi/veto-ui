@@ -1,7 +1,7 @@
 import shared from './shared';
 
 const colors = {
-  primary: '#2378e1',
+  primary: '#2F77DC',
   secondary: '#2378e1',
   light: '#f3f1f5',
   greyLight: '#a4a1b1',
@@ -16,13 +16,14 @@ const colors = {
   veriphiSecondary: '#2b345d',
   bg: ['#fcfcfd', '#f4f5f5', '#ecedee'],
   text: '#111213',
-  textGrey: '#111213',
+  textGrey: '#6E757C',
   textFade: '#b3b7bc',
-  //
 };
 export default {
   ...shared,
-  colors,
+  colors: {
+    ...colors,
+  },
   buttons: {
     outline: {
       background: '#fcfcfd',
@@ -100,7 +101,7 @@ export default {
   },
   cards: {
     normal: {
-      background: colors.bg[0],
+      background: 'bg.0',
       boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     primary: {
@@ -139,19 +140,30 @@ export default {
       fontSize: '1.4rem',
     },
     cardHeading: {
-      fontWeight: 600,
-      color: '#A3A1B0',
-      fontSize: '1.4rem',
+      fontWeight: 800,
+      color: colors.textGrey,
+      textTransform: 'uppercase',
+      fontSize: '1rem',
     },
     cardPrimaryHeading: {
-      fontWeight: 600,
+      fontWeight: 800,
       color: '#0D0B11',
-      fontSize: '1.4rem',
+      fontSize: '1rem',
     },
     cardInsetHeading: {
-      fontWeight: 600,
-      color: '#A3A1B0',
-      fontSize: '1.4rem',
+      fontWeight: 800,
+      color: colors.textGrey,
+      textTransform: 'uppercase',
+      fontSize: '1rem',
     },
+    grey: {
+      color: colors.textGrey,
+    },
+    fade: {
+      color: colors.textFade,
+    },
+  },
+  mainnav: {
+    normal: {},
   },
 };
