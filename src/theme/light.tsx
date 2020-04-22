@@ -21,9 +21,7 @@ const colors = {
 };
 export default {
   ...shared,
-  colors: {
-    ...colors,
-  },
+  colors,
   buttons: {
     outline: {
       background: '#fcfcfd',
