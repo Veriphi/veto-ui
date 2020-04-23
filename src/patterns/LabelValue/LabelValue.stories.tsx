@@ -67,7 +67,7 @@ export const labelValue = () => (
           </Box>
         </Box>
 
-        <Box p={4} bg="bg.1">
+        <Box p={4} bg="background.1">
           <LabelValue label="Total" value="0.27500564 BTC / ~$3,343.90 CAD" />
         </Box>
       </Box>

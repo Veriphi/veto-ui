@@ -1,19 +1,21 @@
 import * as React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'emotion-theming';
-import { lightTheme, darkTheme, Box, GlobalStyles } from '../src';
+import { Box, GlobalStyles, getTheme } from '../src';
 
 const ThemeSwitcher: React.FC = ({ children }) => {
   const [state, setState] = React.useState(
     localStorage.getItem('theme') || 'light'
   );
+  const theme = getTheme(state as any);
+
   return (
-    <ThemeProvider theme={state === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Box mb={2}>
         <select
           value={state}
-          onChange={e => {
+          onChange={(e) => {
             setState(e.target.value);
             window.localStorage.setItem('theme', e.target.value);
           }}
@@ -27,7 +29,7 @@ const ThemeSwitcher: React.FC = ({ children }) => {
   );
 };
 
-const ThemeSwitcherDecorator = storyFn => (
+const ThemeSwitcherDecorator = (storyFn) => (
   <ThemeSwitcher>{storyFn()}</ThemeSwitcher>
 );
 

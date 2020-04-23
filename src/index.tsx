@@ -1,7 +1,7 @@
 import { Alert } from './Alert';
 import { Button } from './Button';
 import { Card } from './Card';
-import { Box, Flex, Grid, GlobalStyles } from './Core';
+import { Box, Flex, Grid, GlobalStyles, getTheme } from './Core';
 import { FormField } from './FormField';
 import { Input } from './Input';
 import { Label } from './Label';
@@ -36,4 +36,5 @@ export {
   Tooltip,
   lightTheme,
   darkTheme,
+  getTheme,
 };

@@ -20,7 +20,7 @@ Table.defaultProps = {
       px: 2,
     },
     'tbody tr:nth-child(odd)': {
-      background: '#F8F6FA',
+      bg: 'table.bgOdd',
     },
     'tbody td': {
       px: 2,

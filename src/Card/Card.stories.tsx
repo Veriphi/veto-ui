@@ -12,6 +12,7 @@ export const card = () => (
     <h2>Normal Card (default)</h2>
     <Card>
       <Text variant="cardHeading">Card Heading</Text>
+      This is a card
       <Text variant="grey">This is app-text-grey</Text>
       <Text variant="fade">This is app-text-fade</Text>
     </Card>

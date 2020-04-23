@@ -82,7 +82,7 @@ const GlobalStyles = () => {
           fontFamily: theme.fontFamily['sans-serif'],
           fontSize: '16px',
           color: theme.colors.text,
-          backgroundColor: theme.colors.bg[0],
+          backgroundColor: theme.colors.background[0],
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         },
@@ -93,9 +93,11 @@ const GlobalStyles = () => {
 };
 
 type Modes = 'light' | 'dark';
-const getTheme = (mode: Modes = 'light') =>
-  lodashMerge({}, baseTheme, {
+const getTheme = (mode: Modes = 'light') => {
+  const mergedTheme = lodashMerge({}, baseTheme, {
     colors: lodashGet(baseTheme.colors.modes, mode, baseTheme.colors),
   });
+  return mergedTheme;
+};
 
 export { Box, Flex, Grid, GlobalStyles, getTheme };

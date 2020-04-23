@@ -13,7 +13,7 @@ Input.defaultProps = {
   type: 'text',
   __css: {
     p: 2,
-    bg: 'bg.0',
+    bg: 'input.bg',
     fontSize: 'normal',
     fontFamily: 'sans-serif',
     borderRadius: 'radius-1',
@@ -32,7 +32,7 @@ Input.defaultProps = {
 
 const commonAddonStyles = {
   p: 2,
-  bg: 'bg.0',
+  bg: 'input.bg',
   color: 'textGrey',
   fontSize: 'small',
   lineHeight: 1.6,

@@ -11,7 +11,8 @@ Textarea.defaultProps = {
   variant: 'normal',
   __css: {
     p: 2,
-    bg: 'bg.0',
+    color: 'text',
+    bg: 'background.0',
     fontSize: 'normal',
     fontFamily: 'sans-serif',
     borderRadius: 'radius-1',
@@ -20,6 +21,7 @@ Textarea.defaultProps = {
     borderStyle: 'solid',
     '&::placeholder': {
       fontSize: 'small',
+      color: 'textFade',
     },
   },
 };
