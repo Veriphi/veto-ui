@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Grid } from '../Core';
 import { lightTheme } from '../theme';
+import ReactJson from 'react-json-view';
 
 export default {
   title: 'theme',
@@ -23,4 +24,8 @@ export const colors = () => (
       </Box>
     ))}
   </Grid>
+);
+
+export const ThemeJSONViewer = () => (
+  <ReactJson collapsed={1} src={lightTheme} />
 );
