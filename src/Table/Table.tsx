@@ -8,6 +8,8 @@ interface Props
 const Table = styled<'table'>(Box as any)<Props>();
 Table.defaultProps = {
   as: 'table',
+  tx: 'table',
+  variant: 'normal',
   __css: {
     borderCollapse: 'collapse',
     width: '100%',
@@ -18,11 +20,12 @@ Table.defaultProps = {
       px: 2,
     },
     'tbody tr:nth-child(odd)': {
-      background: '#F8F6FA',
+      bg: 'table.bgOdd',
     },
     'tbody td': {
       px: 2,
       py: 1,
+      color: 'text',
     },
   },
 };

@@ -33,7 +33,7 @@ export const modal = () => {
             <Box width={1 / 2}>
               <Text
                 sx={{
-                  color: 'secondary',
+                  color: 'primary',
                   textTransform: 'uppercase',
                   fontSize: 'small',
                   fontWeight: 'bold',
@@ -50,7 +50,7 @@ export const modal = () => {
             <Box width={1 / 2}>
               <Text
                 sx={{
-                  color: 'secondary',
+                  color: 'primary',
                   textTransform: 'uppercase',
                   fontSize: 'small',
                   fontWeight: 'bold',
@@ -68,7 +68,7 @@ export const modal = () => {
             <Box width={1 / 2}>
               <Text
                 sx={{
-                  color: 'secondary',
+                  color: 'primary',
                   textTransform: 'uppercase',
                   fontSize: 'small',
                   fontWeight: 'bold',
@@ -86,7 +86,7 @@ export const modal = () => {
             <Box width={1 / 2}>
               <Text
                 sx={{
-                  color: 'secondary',
+                  color: 'primary',
                   textTransform: 'uppercase',
                   fontSize: 'small',
                   fontWeight: 'bold',
@@ -112,7 +112,7 @@ export const modal = () => {
             <Box width={1 / 2}>
               <Text
                 sx={{
-                  color: 'secondary',
+                  color: 'primary',
                   textTransform: 'uppercase',
                   fontSize: 'small',
                   fontWeight: 'bold',

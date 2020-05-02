@@ -1,27 +1,83 @@
 import shared from './shared';
 
-const colors = {
-  primary: '#2F77DC',
-  secondary: '#2378e1',
-  light: '#f3f1f5',
-  greyLight: '#a4a1b1',
-  grey: '#A4A1B1',
-  greyDark: '#403d4d',
-  dark: '#0e0b11',
-  confirm: '#49ba69',
-  cancel: '#ff2729',
-  warning: '#ffc137',
-  message: '#2378e1',
-  veriphiPrimary: '#f5932f',
-  veriphiSecondary: '#2b345d',
-  bg: ['#fcfcfd', '#f4f5f5', '#ecedee'],
-  text: '#111213',
-  textGrey: '#6E757C',
-  textFade: '#b3b7bc',
-};
 export default {
   ...shared,
-  colors,
+  colors: {
+    primary: '#2F77DC', // safe to rename
+    secondary: '#2378e1', // safe to rename
+    light: '#f3f1f5', // safe to rename
+    greyLight: '#a4a1b1', // safe to rename
+    grey: '#A4A1B1', // safe to rename
+    greyDark: '#403d4d', // safe to rename
+    confirm: '#49ba69', // safe to rename
+    cancel: '#ff2729', // DANGEROUS
+    warning: '#ffc137', // safe to rename
+    message: '#2378e1', // safe to rename
+    text: '#111213', // DANGEROUS
+    textGrey: '#6E757C', // DANGEROUS
+    textFade: '#b3b7bc', // DANGEROUS
+
+    // New theme stuff
+    white: '#FFF',
+    black: '#000',
+    background: {
+      0: '#fcfcfd',
+      1: '#f4f5f5',
+      2: '#ecedee',
+    },
+    mainNav: {
+      background: '#fcfcfd',
+      navigationElementSelected: '#f4f5f5',
+    },
+    cards: {
+      normalBg: '#fcfcfd',
+      primaryBg: '#2F77DC',
+      insetBg: '#f4f5f5',
+    },
+    input: {
+      bg: '#fcfcfd',
+      borderColor: '#E7E6E7',
+    },
+    select: {
+      bg: '#FDFBFF',
+      borderColor: '#E7E6E7',
+    },
+    table: {
+      bgOdd: '#F8F6FA',
+    },
+    modes: {
+      dark: {
+        bg: ['#0A0A0B', '#0E0F10', '#131416'],
+        text: '#FAFAFA',
+        textGrey: '#6E757C',
+        textFade: '#3E4246',
+        input: {
+          bg: '#0A0A0B',
+          borderColor: 'grey',
+        },
+        background: {
+          0: '#0A0A0B',
+          1: '#0E0F10',
+          2: '#131416',
+        },
+        mainNav: {
+          background: '#0A0A0B',
+          navigationElementSelected: '#0E0F10',
+        },
+        select: {
+          bg: '#0E0F10',
+          borderColor: 'grey',
+        },
+        cards: {
+          normalBg: '#0E0F10',
+          insetBg: '#131416',
+        },
+        table: {
+          bgOdd: '#131416',
+        },
+      },
+    },
+  },
   buttons: {
     outline: {
       background: '#fcfcfd',
@@ -85,7 +141,7 @@ export default {
   },
   inputs: {
     normal: {
-      borderColor: '#E7E6E7',
+      borderColor: 'input.borderColor',
     },
     valid: {
       borderColor: '#49ba69',
@@ -99,32 +155,32 @@ export default {
   },
   cards: {
     normal: {
-      background: 'bg.0',
+      bg: 'cards.normalBg',
       boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     primary: {
       color: 'white',
-      background: '#2378e1',
+      bg: 'cards.primaryBg',
       boxShadow: '0 0.25em 0.375em rgba(0,0,0,0.2)',
     },
     inset: {
-      background: '#F8F6FA',
+      bg: 'cards.insetBg',
       boxShadow: 'none',
     },
   },
   tooltips: {
     normal: {
-      background: colors.greyDark,
+      background: 'greyDark',
       color: '#fff',
       '.veto-tooltip-arrow::after, .veto-tooltip-arrow::before': {
-        background: colors.greyDark,
+        background: 'greyDark',
       },
     },
   },
   texts: {
     heading1: {
       fontWeight: 'lighter',
-      color: colors.greyLight,
+      color: 'greyLight',
       fontSize: '3.2rem',
     },
     heading2: {
@@ -134,12 +190,12 @@ export default {
     },
     heading3: {
       fontWeight: 600,
-      color: 'veriphiPrimary',
+      color: '#f5932f',
       fontSize: '1.4rem',
     },
     cardHeading: {
       fontWeight: 800,
-      color: colors.textGrey,
+      color: 'textGrey',
       textTransform: 'uppercase',
       fontSize: '1rem',
     },
@@ -150,18 +206,15 @@ export default {
     },
     cardInsetHeading: {
       fontWeight: 800,
-      color: colors.textGrey,
+      color: 'textGrey',
       textTransform: 'uppercase',
       fontSize: '1rem',
     },
     grey: {
-      color: colors.textGrey,
+      color: 'textGrey',
     },
     fade: {
-      color: colors.textFade,
+      color: 'textFade',
     },
-  },
-  mainnav: {
-    normal: {},
   },
 };

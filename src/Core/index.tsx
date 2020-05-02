@@ -20,6 +20,9 @@ import {
   GridProps,
   compose,
 } from 'styled-system';
+import lodashMerge from 'lodash.merge';
+import lodashGet from 'lodash.get';
+import baseTheme from '../theme/base';
 
 type SxProps = { theme?: any; sx?: SystemStyleObject };
 const sx = (props: SxProps) => css(props.sx)(props.theme);
@@ -78,7 +81,8 @@ const GlobalStyles = () => {
         body: {
           fontFamily: theme.fontFamily['sans-serif'],
           fontSize: '16px',
-          backgroundColor: theme.colors.bg[0],
+          color: theme.colors.text,
+          backgroundColor: theme.colors.background[0],
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         },
@@ -88,4 +92,12 @@ const GlobalStyles = () => {
   );
 };
 
-export { Box, Flex, Grid, GlobalStyles };
+type Modes = 'light' | 'dark';
+const getTheme = (mode: Modes = 'light') => {
+  const mergedTheme = lodashMerge({}, baseTheme, {
+    colors: lodashGet(baseTheme.colors.modes, mode, baseTheme.colors),
+  });
+  return mergedTheme;
+};
+
+export { Box, Flex, Grid, GlobalStyles, getTheme };

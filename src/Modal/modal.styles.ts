@@ -39,7 +39,7 @@ const asideHideKeyframe = keyframes`
 const modalStyles = (theme: any): CSSObject => ({
   '.VetoModal': {
     boxShadow: theme.cards?.normal?.boxShadow,
-    background: theme.cards?.normal?.background,
+    background: theme.colors.background[0],
     width: 'fit-content',
     position: 'absolute',
     '&:focus': {
@@ -60,6 +60,7 @@ const modalStyles = (theme: any): CSSObject => ({
   '.VetoModalPortalAside .ReactModal__Overlay': {
     display: 'flex',
     justifyContent: 'flex-end',
+    backgroundColor: `${theme.colors.background[1]}69 !important`,
   },
   '.VetoModalPortalAside .ReactModal__Content--after-open': {
     animation: `${asideShowKeyframe} 200ms cubic-bezier(0, 0, 0.2, 1) forwards`,
@@ -70,6 +71,7 @@ const modalStyles = (theme: any): CSSObject => ({
   '.VetoModalAside': {
     minHeight: '100%',
     maxWidth: '40%',
+    background: theme.colors.background[0],
     boxShadow: '-1px 0px 10px 6px rgba(0, 0, 0, 0.05)',
     '&:focus': {
       outline: 'none',

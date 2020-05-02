@@ -1,7 +1,7 @@
 import { Alert } from './Alert';
 import { Button } from './Button';
 import { Card } from './Card';
-import { Box, Flex, Grid, GlobalStyles } from './Core';
+import { Box, Flex, Grid, GlobalStyles, getTheme } from './Core';
 import { FormField } from './FormField';
 import { Input } from './Input';
 import { Label } from './Label';
@@ -12,7 +12,7 @@ import { Switch } from './Switch';
 import { Text, TextLink } from './Text';
 import { Textarea } from './Textarea';
 import { Tooltip } from './Tooltip';
-import { lightTheme, darkTheme } from './theme';
+import { lightTheme } from './theme';
 
 export {
   Alert,
@@ -35,5 +35,5 @@ export {
   Textarea,
   Tooltip,
   lightTheme,
-  darkTheme,
+  getTheme,
 };
