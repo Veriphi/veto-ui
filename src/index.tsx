@@ -12,7 +12,7 @@ import { Switch } from './Switch';
 import { Text, TextLink } from './Text';
 import { Textarea } from './Textarea';
 import { Tooltip } from './Tooltip';
-import { lightTheme, darkTheme } from './theme';
+import { lightTheme } from './theme';
 
 export {
   Alert,
@@ -35,6 +35,5 @@ export {
   Textarea,
   Tooltip,
   lightTheme,
-  darkTheme,
   getTheme,
 };

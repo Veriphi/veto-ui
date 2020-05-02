@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Breaking/Depcracted
+
+- darkTheme been removed
+- lightTheme will be deprecated. Please use `getTheme('light')` instead to retrieve the theme object.
+- Theme `bg` key has been renamed to `background`
+
 ## 0.4.0
 
 ### Added

@@ -27,14 +27,20 @@ Once the dependencies have been installed, you'll need to hook in the theme prov
 ```jsx
 import * as React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import { lightTheme, GlobalStyles } from '@veriphi/veto-ui';
+import { getTheme, GlobalStyles } from '@veriphi/veto-ui';
 
-const App = () => (
-  <ThemeProvider theme={lightTheme}>
-    <GlobalStyles />
-    {/* The rest of your app */}
-  </ThemeProvider>
-);
+const App = () => {
+  // We can setTheme name from light -> dark to swap modes
+  const [themeName, setThemeName] = React.useState('light');
+  const theme = getTheme(themeName);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {/* The rest of your app */}
+    </ThemeProvider>
+  );
+};
 ```
 
 ### Adding the required font
@@ -52,11 +58,11 @@ Simply add the following to the `<head>` of your application.
 
 ## TODO
 
-- [ ] Dark Mode
+- [x] Dark Mode
 - [x] Modal
 - [x] Tooltip
 - [ ] Select component with custom dropdown
-- [ ] Sliding Menu
+- [x] Sliding Menu
 - [ ] Docs docs docs
 
 ## Contributing
