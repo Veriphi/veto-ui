@@ -3,6 +3,7 @@
   "private": false,
   "version": "0.5.0",
   "license": "MIT",
+  "homepage": "https://github.com/Veriphi/veto-ui",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
