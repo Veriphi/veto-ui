@@ -21,3 +21,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      - name: Visual diffing
+        run: yarn chromatic # install dependencies:  
