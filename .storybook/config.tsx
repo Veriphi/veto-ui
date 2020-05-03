@@ -2,28 +2,30 @@ import * as React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'emotion-theming';
 import { Box, GlobalStyles, getTheme } from '../src';
+import isChromatic from 'chromatic/isChromatic';
 
 const ThemeSwitcher: React.FC = ({ children }) => {
   const [state, setState] = React.useState(
     localStorage.getItem('theme') || 'light'
   );
   const theme = getTheme(state as any);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Box mb={2}>
-        <select
-          value={state}
-          onChange={(e) => {
-            setState(e.target.value);
-            window.localStorage.setItem('theme', e.target.value);
-          }}
-        >
-          <option value="light">Light Theme</option>
-          <option value="dark">Dark Theme</option>
-        </select>
-      </Box>
+      {!isChromatic() && (
+        <Box mb={2}>
+          <select
+            value={state}
+            onChange={(e) => {
+              setState(e.target.value);
+              window.localStorage.setItem('theme', e.target.value);
+            }}
+          >
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+          </select>
+        </Box>
+      )}
       {children}
     </ThemeProvider>
   );

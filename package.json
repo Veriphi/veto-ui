@@ -15,7 +15,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic"
   },
   "module": "dist/veto-ui.esm.js",
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "babel-loader": "^8.0.6",
+    "chromatic": "^4.0.2",
     "emotion-theming": "^10.0.27",
     "husky": "^4.2.1",
     "react": "^16.12.0",
