@@ -16,7 +16,6 @@ export default {
     text: '#111213', // DANGEROUS
     textGrey: '#6E757C', // DANGEROUS
     textFade: '#b3b7bc', // DANGEROUS
-
     // New theme stuff
     white: '#FFF',
     black: '#000',

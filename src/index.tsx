@@ -3,7 +3,7 @@ import { Button } from './Button';
 import { Card } from './Card';
 import { Box, Flex, Grid, GlobalStyles, getTheme } from './Core';
 import { FormField } from './FormField';
-import { Input } from './Input';
+import { Input, InputWithAddon } from './Input';
 import { Label } from './Label';
 import { MainNav, NavigationElement } from './MainNav';
 import { Modal } from './Modal';
@@ -24,6 +24,7 @@ export {
   Grid,
   GlobalStyles,
   Input,
+  InputWithAddon,
   Label,
   MainNav,
   NavigationElement,
