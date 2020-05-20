@@ -1,7 +1,7 @@
 {
   "name": "@veriphi/veto-ui",
   "private": false,
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "homepage": "https://github.com/Veriphi/veto-ui",
   "main": "dist/index.js",
