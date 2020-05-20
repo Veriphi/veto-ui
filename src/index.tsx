@@ -9,6 +9,7 @@ import { MainNav, NavigationElement } from './MainNav';
 import { Modal } from './Modal';
 import { Select } from './Select';
 import { Switch } from './Switch';
+import { Table } from './Table';
 import { Text, TextLink } from './Text';
 import { Textarea } from './Textarea';
 import { Tooltip } from './Tooltip';
@@ -31,6 +32,7 @@ export {
   Modal,
   Select,
   Switch,
+  Table,
   Text,
   TextLink,
   Textarea,
