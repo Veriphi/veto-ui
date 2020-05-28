@@ -83,6 +83,10 @@ export default {
       border: '1px solid',
       borderColor: '#AFADBA',
       color: '#A3A1B0',
+      '&:disabled': {
+        color: '#d6d5dc',
+        borderColor: '#e9e9ec',
+      },
     },
     primary: {
       color: 'white',
@@ -90,9 +94,12 @@ export default {
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
       transition: `all ${shared.transition.base} ease-in-out`,
-      '&:hover': {
+      '&:hover:enabled': {
         background: '#4681D9',
         boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
+      '&:disabled': {
+        background: '#bcd6f6',
       },
     },
     secondary: {
@@ -100,8 +107,11 @@ export default {
       background: '#a4a1b1',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
-      '&:hover': {
+      '&:hover:enabled': {
         boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
+      '&:disabled': {
+        background: '#e4e3e8',
       },
     },
     danger: {
@@ -109,16 +119,22 @@ export default {
       background: '#ff2729',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
-      '&:hover': {
+      '&:hover:enabled': {
         boxShadow: shared.shadows.boxShadow.buttonHover,
+      },
+      '&:disabled': {
+        background: '#ffcccd',
       },
     },
     white: {
       background: 'rgb(252, 252, 253)',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
-      '&:hover': {
+      '&:hover:enabled': {
         background: 'rgb(252, 252, 253, 0.8)',
+      },
+      '&:disabled': {
+        background: 'rgb(252, 252, 255)',
       },
     },
     dark: {
@@ -126,9 +142,12 @@ export default {
       background: '#403d4d',
       boxShadow: shared.shadows.boxShadow.button,
       border: 'none',
-      '&:hover': {
+      '&:hover:enabled': {
         boxShadow: shared.shadows.boxShadow.buttonHover,
         background: '#4D4B59',
+      },
+      '&:disabled': {
+        background: '#c8c6d2',
       },
     },
     veto: {

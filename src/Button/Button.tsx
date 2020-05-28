@@ -30,8 +30,11 @@ BaseButton.defaultProps = {
       transition: `all ${theme.transition.base} ease-in-out`,
       transform: 'translate(8px)',
     },
-    '&:hover svg': {
+    '&:hover:enabled svg': {
       transform: 'translate(10px)',
+    },
+    '&:disabled': {
+      cursor: 'auto',
     },
   }),
 };

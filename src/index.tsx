@@ -13,7 +13,6 @@ import { Table } from './Table';
 import { Text, TextLink } from './Text';
 import { Textarea } from './Textarea';
 import { Tooltip } from './Tooltip';
-import { lightTheme } from './theme';
 
 export {
   Alert,
@@ -37,6 +36,5 @@ export {
   TextLink,
   Textarea,
   Tooltip,
-  lightTheme,
   getTheme,
 };
