@@ -1,0 +1,99 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Input, InputWithAddon } from './Input';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Input"
+  component={Input}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Input
+
+An extension of the base HTML `<input />`. Includes the exact same properties as the native element, with an
+additional `variant` prop that lets you customize the outline colour.
+
+Highly recommeneded to use this component in conjunction with the `<FormField />` component
+
+<Preview>
+  <Story name="Input">
+    <Box>
+      <h2>Input Element</h2>
+      <Input placeholder="This is a good old textfield" />
+      <h2>Input Element - Valid</h2>
+      <Input variant="valid" placeholder="This is a good old textfield" />
+      <h2>Input Element - Warning</h2>
+      <Input variant="warning" placeholder="This is a good old textfield" />
+      <h2>Input Element - Error</h2>
+      <Input variant="error" placeholder="This is a good old textfield" />
+    </Box>
+  </Story>
+</Preview>
+
+<Props of={Input} />
+
+<br />
+
+## Addons
+
+Inputs can also have addons attached to them. You may use the `<InputWithAddon />` component to do so.
+
+<Preview>
+  <Story name="Input with addons">
+    <Box>
+      <h2>Input Element</h2>
+      <InputWithAddon
+        placeholder="This is a good old textfield"
+        addonRight="sats"
+      />
+      <h2>Input Element - Valid</h2>
+      <InputWithAddon
+        variant="valid"
+        placeholder="This is a good old textfield"
+        addonRight="sats"
+      />
+      <h2>Input Element - Warning</h2>
+      <InputWithAddon
+        variant="warning"
+        placeholder="This is a good old textfield"
+        addonRight="sats"
+      />
+      <h2>Input Element - Error</h2>
+      <InputWithAddon
+        variant="error"
+        placeholder="This is a good old textfield"
+        addonRight="sats"
+      />
+      <h2>Input Element (left side addon)</h2>
+      <InputWithAddon
+        placeholder="This is a good old textfield"
+        addonLeft="sats"
+      />
+      <h2>Input Element (left side addon) - Valid</h2>
+      <InputWithAddon
+        variant="valid"
+        placeholder="This is a good old textfield"
+        addonLeft="sats"
+      />
+      <h2>Input Element (left side addon) - Warning</h2>
+      <InputWithAddon
+        variant="warning"
+        placeholder="This is a good old textfield"
+        addonLeft="sats"
+      />
+      <h2>Input Element (left side addon) - Error</h2>
+      <InputWithAddon
+        variant="error"
+        placeholder="This is a good old textfield"
+        addonLeft="sats"
+      />
+    </Box>
+  </Story>
+</Preview>
+
+<Props of={InputWithAddon} />

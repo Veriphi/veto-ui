@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { MainNav, NavigationElement } from './MainNav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBorderAll } from '@fortawesome/free-solid-svg-icons/faBorderAll';
+import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/MainNav"
+  component={MainNav}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# MainNav
+
+The main navigation of an application. There really only should be one of this per app.
+
+Ideally, this needs to be used a the root of the application, since it behaves like a layout.
+
+We have also provided an additional component to be used as navigation elements.
+
+<Preview>
+  <Story name="main nav" height="600px">
+    <MainNav
+      navigations={[
+        <NavigationElement
+          title="Dashboard"
+          isSelected={true}
+          icon={<FontAwesomeIcon icon={faBorderAll} />}
+        />,
+        <NavigationElement
+          title="Explorer"
+          icon={<FontAwesomeIcon icon={faWallet} />}
+        />,
+      ]}
+    >
+      <div>This is some content</div>
+    </MainNav>
+  </Story>
+</Preview>
+
+## Props
+
+### `<MainNav />`
+
+<Props of={MainNav} />
+
+### `<NavigationElement />`
+
+<Props of={NavigationElement} />

@@ -1,0 +1,81 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Text } from '../Text';
+import { Box, Flex } from './index';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Core Feature"
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Core features
+
+Most of the basic components available in `veto-ui` are augmented with the `sx` props. This is a concept that comes
+directly from [rebass](https://rebassjs.org/). The main difference between that library and this one is that we're
+using proper typescript typing under the hood, but functionally, it's the same.
+
+The `sx` props is a powerful tool to dynamically inject styles at runtime. It's also directly linked into the theming
+system. What this means is you can expect consistant colors, spacings and such.
+
+We've provided a few basic components with no stylings attached to them so you can edit them at will to remix new
+components.
+
+## Box
+
+The box component is an augmented div with the `sx` props. By default, no styles are applied to it.
+
+<Preview>
+  <Story name="basic">
+    <Box>This is a box</Box>
+  </Story>
+</Preview>
+
+To customize it, you can simply add your css definition object into the `sx` props.
+Any valid css (and this includes pseudo classes and targeting classes directly) is supported.
+
+<Preview>
+  <Story name="box with sx">
+    <Box
+      sx={{
+        bg: 'papayawhip',
+        color: 'hotpink',
+      }}
+    >
+      This is a box
+    </Box>
+  </Story>
+</Preview>
+
+Additionally, since `sx` is connected directly to the root theme object, you can use theme values directly!
+By default, the property and values you access depends on the key being used in your css definition object.
+
+For example, if we use the `p` property (shorthand for `padding`), you can write `p: 2` to access the second
+scale of the spacing property contained within the theme object.
+
+<Preview>
+  <Story name="box with theme values">
+    <Box
+      sx={{
+        bg: 'papayawhip',
+        color: 'hotpink',
+        p: 2,
+      }}
+    >
+      This is a box
+    </Box>
+  </Story>
+</Preview>
+
+<Props of={Box} />
+
+## Flex
+
+Same API as the `<Box />` component. The main difference is that it's has `display: flex` already set.
+
+## Grid
+
+Same API as the `<Box />` component. The main difference is that it's has `display: grid` already set.

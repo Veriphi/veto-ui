@@ -1,0 +1,114 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
+import { Button } from './Button';
+import { Flex } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Button"
+  component={Button}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Button
+
+This component extends `<Box>`. As such, it has the `sx` props in which you can forward
+whatever styles you wish.
+
+Additionally, `<Button />` supports all normal props a regular `<button />` should support. So things like
+`onClick` will work as expected.
+
+<Story name="basic">
+  <Button>This is a button</Button>
+</Story>
+
+<br />
+
+## Variants
+
+The `<Button />` component has a prop called `variant`. Depending on the string that is passed, the style of
+the button will change
+
+<Preview>
+  <Story name="variants">
+    <div>
+      <div>
+        <h3>Default button</h3>
+        <Button>Default</Button> <Button disabled>Default (disabled)</Button>
+      </div>
+      <div>
+        <h3>Primary button</h3>
+        <Button variant="primary">Primary</Button> <Button
+          variant="primary"
+          disabled
+        >
+          Primary (disabled)
+        </Button>
+      </div>
+      <div>
+        <h3>Secondary button</h3>
+        <Button variant="secondary">Secondary</Button> <Button
+          variant="secondary"
+          disabled
+        >
+          Secondary (disabled)
+        </Button>
+      </div>
+      <div>
+        <h3>Danger button</h3>
+        <Button variant="danger">Danger</Button> <Button
+          variant="danger"
+          disabled
+        >
+          Danger (disabled)
+        </Button>
+      </div>
+      <div>
+        <h3>White button</h3>
+        <Button variant="white">White</Button> <Button variant="white" disabled>
+          White (disabled)
+        </Button>
+      </div>
+      <div>
+        <h3>Dark button</h3>
+        <Button variant="dark">Dark</Button> <Button variant="dark" disabled>
+          Dark
+        </Button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Icons
+
+You may add an icon to the `<Button />` via the `icon` prop. The icon being passed in must be a valid font-awesome
+icon.
+
+For example, if you wish to add the checkmark icon, you must first import the corresponding icon:
+
+```jsx
+import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
+```
+
+Once imported, you can add it to the Button via props.
+
+<Preview>
+  <Story name="icons">
+    <div>
+      <Button icon={faCheck}>Export CSV</Button>
+      <br />
+      <br />
+      <Button variant="primary" icon={faCheck}>
+        Send payment
+      </Button>
+    </div>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Button} />

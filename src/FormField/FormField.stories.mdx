@@ -1,0 +1,47 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormField } from './FormField';
+import { Input } from '../Input';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/FormField"
+  component={FormField}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# FormField
+
+A form field is used to wrap `<Input />` components. It differs from a `<Label />` in that it provides a much more
+opinionated interface to structure your form.
+
+<Preview>
+  <Story name="formfield simple">
+    <Box width="416px">
+      <FormField label="Label">
+        <Input placeholder="Channel label" />
+      </FormField>
+    </Box>
+  </Story>
+</Preview>
+
+The formfield provides various props to add labels, descriptions and tooltips.
+
+<Preview>
+  <Story name="formfield advanved">
+    <Box width="416px">
+      <FormField
+        label="Funding"
+        helperText="Max. available: 0.0000615 BTC"
+        tooltipContent="A connection is something"
+      >
+        <Input placeholder="Funding" />
+      </FormField>
+    </Box>
+  </Story>
+</Preview>
+
+<Props of={FormField} />

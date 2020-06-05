@@ -78,3 +78,9 @@ export const formField = () => (
     </Modal>
   </div>
 );
+
+formField.story = {
+  docs: {
+    hidden: true,
+  },
+};

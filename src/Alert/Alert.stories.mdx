@@ -1,0 +1,35 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Alert } from './Alert';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Alert"
+  component={Alert}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Alert
+
+Use an alert when you want to signal that something is going on.
+
+This component extends `<Box>`. As such, it has the `sx` props in which you can forward
+whatever styles you wish.
+
+<Preview>
+  <Story name="alert">
+    <Box width="416px">
+      <Alert>
+        <strong>
+          If you lose your seed you'll have no way to recover your wallet.
+        </strong>
+        To make sure that you have properly saved your seed, please retype words
+        6, 2 & 15...
+      </Alert>
+    </Box>
+  </Story>
+</Preview>

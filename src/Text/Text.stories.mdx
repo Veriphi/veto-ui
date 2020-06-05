@@ -1,0 +1,48 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Text, TextLink } from './Text';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Text"
+  component={Text}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Text
+
+Text is a simple `<Box />` component with the appropriate variant key attached to it.
+
+In order to style it properly, you will need to pass in appropriate variant string into the `variant` prop.
+
+**Please note:** the underlying element is a `div` by default. You will need to use the `as` prop to properly
+set the right element.
+
+<Preview>
+  <Story name="text">
+    <div>
+      <h3>Text Element</h3>
+      <Text>Regular old Text</Text>
+      <h3>Heading 1 Element</h3>
+      <Text variant="heading1">Explorer</Text>
+      <h3>Heading 2 Element</h3>
+      <Text variant="heading2">IMPORTANT</Text>
+      <h3>Heading 3 Element</h3>
+      <Text variant="heading3">Heading 3</Text>
+    </div>
+  </Story>
+</Preview>
+
+# TextLink
+
+Basically, a properly styled anchor tag.
+
+<Preview>
+  <Story name="textlink">
+    <TextLink href="#">Link</TextLink>
+  </Story>
+</Preview>

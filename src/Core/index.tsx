@@ -38,11 +38,28 @@ export interface BoxProps
     FlexboxProps,
     LayoutProps,
     Omit<ColorProps, 'color'> {
+  /**
+   * Change the underlying element. For example, if you pass in `a`, Box will be rendered as an anchor tag.
+   */
   as?: React.ElementType;
   color?: string;
+  /**
+   * CSS style object that is automatically hooked to the theme
+   */
   sx?: SystemStyleObject;
+  /**
+   * Theme key. Used in conjunction with variant to pull values from a particular key
+   */
   tx?: string;
+  /**
+   * Which subkey to pull from the theme key defined in the variant.
+   */
   variant?: string | string[];
+  /**
+   * Private property to set the base css definition
+   * Under regular circumstances, you should never use this.
+   * When extending the `box` component, this may be useful to set base styles.
+   */
   __css?: SystemStyleObject;
 }
 type CssFunctionType = { css?: CSSObject; theme?: any };

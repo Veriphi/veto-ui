@@ -1,0 +1,45 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Label } from './Label';
+import { Box } from '../Core';
+import { Input } from '../Input';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Label"
+  component={Label}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Label
+
+The `<Label />` is basically a pre-styled basic `<label />`. It has all the same properties as the native component
+
+<Preview>
+  <Story name="label">
+    <Label>Label</Label>
+  </Story>
+</Preview>
+
+You may obviously create a form field using the `<Label />` and the `<Input />` component.
+
+<Preview>
+  <Story name="Assembling a form field">
+    <form>
+      <Flex flexDirection="column">
+        <Box mb={1} ml={2}>
+          <Label htmlFor="channel">Label</Label>
+        </Box>
+        <div>
+          <Input id="channel" placeholder="Channel label..." />
+        </div>
+      </Flex>
+    </form>
+  </Story>
+</Preview>
+
+However, we recommend using the `<FormField />` component to simplify this task, as it removes a lot of the
+boilerplate when it comes to create forms.

@@ -6,6 +6,8 @@ import { MainNav, NavigationElement } from '.';
 
 export default {
   title: 'MainNav',
+  component: MainNav,
+  subcomponents: { NavigationElement },
 };
 
 export const mainNav = () => (
@@ -27,3 +29,13 @@ export const mainNav = () => (
     </MainNav>
   </div>
 );
+
+mainNav.story = {
+  parameters: {
+    docs: {
+      prepareForInline: storyFn => {
+        return storyFn();
+      },
+    },
+  },
+};
