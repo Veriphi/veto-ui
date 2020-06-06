@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Tooltip background will now render properly
+- Select will now have a small border radius applied to it
+
 ## 0.6.0
 
 ### Breaking
