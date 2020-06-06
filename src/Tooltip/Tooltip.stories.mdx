@@ -1,0 +1,25 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Tooltip } from './Tooltip';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Tooltip"
+  component={Tooltip}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Tooltip
+
+<Preview>
+  <Story name="tooltip">
+    <Tooltip content={<div>This is some explanation box!</div>}>
+      Hover on me!
+    </Tooltip>
+  </Story>
+</Preview>
+
+<Props of={Tooltip} />

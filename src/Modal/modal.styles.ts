@@ -50,6 +50,7 @@ const modalStyles = (theme: any): CSSObject => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 9999,
   },
   '.ReactModal__Content--after-open': {
     animation: `${showKeyframe} 200ms cubic-bezier(0, 0, 0.2, 1) forwards`,

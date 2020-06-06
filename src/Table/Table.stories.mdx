@@ -1,13 +1,29 @@
-import * as React from 'react';
-import { Table } from '.';
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Table } from './Table';
+import { DocsContainer } from '../../.storybook/preview';
 
-export default {
-  title: 'Table',
-};
+<Meta
+  title="Basics/Table"
+  component={Table}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
 
-export const table = () => (
-  <div>
-    <h2>Table Element</h2>
+# Table
+
+The `<Table />` is basically a pre-styled basic `<table />`.
+It has all the same properties as the native component.
+
+Use the native internal table elements to create your table.
+
+If you require advanced functionalities, such as sorting, please use
+[react-table](https://github.com/tannerlinsley/react-table) to add such functionalties.
+
+<Preview>
+  <Story name="switch">
     <Table>
       <thead>
         <tr>
@@ -54,5 +70,5 @@ export const table = () => (
         </tr>
       </tbody>
     </Table>
-  </div>
-);
+  </Story>
+</Preview>
