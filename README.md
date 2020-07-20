@@ -56,6 +56,33 @@ Simply add the following to the `<head>` of your application.
 />
 ```
 
+### Adding SSR support
+
+Although the library uses emotion (which provides a way for configless SSR), the icon svg library requires you to
+add a css file at the root of your application.
+
+If using `Next.js`, you will need to add the following in the `pages/_app.(js|tsx)` file:
+
+```js
+import React from 'react';
+import App, { Container } from 'next/app';
+
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return <Component {...pageProps} />;
+  }
+}
+
+export default MyApp;
+```
+
+For further information, please consult the [font-awesome github project](https://github.com/FortAwesome/react-fontawesome#integrating-with-other-tools-and-frameworks)
+
 ## TODO
 
 - [x] Dark Mode

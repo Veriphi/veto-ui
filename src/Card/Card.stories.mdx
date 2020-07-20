@@ -1,0 +1,60 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Card } from './Card';
+import { Text } from '../Text';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Card"
+  component={Card}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Card
+
+Card is used to contain elements in a defined container in a page.
+
+A card will always span full width. The `<Card />` uses the `<Box />` component under the hood. This means that
+you may override styles using the `sx` props.
+
+<Story name="basic">
+  <Card>This is a card</Card>
+</Story>
+
+<br />
+<br />
+
+## Variants
+
+Cards have multiple variants. You may use the `variant` prop to customize the background color of the card.
+
+Please note, that due to theme swaps and such, you will need to manually adjust the `<Text />`
+
+<Preview>
+  <Story name="alert">
+    <Box>
+      <h2>Normal Card (default)</h2>
+      <Card>
+        <Text variant="cardHeading">Card Heading</Text>
+        This is a card
+        <Text variant="grey">This is app-text-grey</Text>
+        <Text variant="fade">This is app-text-fade</Text>
+      </Card>
+      <h2>Primary Card</h2>
+      <Card variant="primary">This is a card</Card>
+      <h2>Card with Inset Card</h2>
+      <Card>
+        <Text variant="cardInsetHeading">Card Heading</Text>
+        <Card variant="inset">
+          This is an inset card
+          <Text variant="grey">This is app-text-grey</Text>
+          <Text variant="fade">This is app-text-fade</Text>
+        </Card>
+      </Card>
+    </Box>
+  </Story>
+</Preview>

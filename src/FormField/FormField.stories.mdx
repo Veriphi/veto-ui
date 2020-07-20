@@ -1,0 +1,111 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormField } from './FormField';
+import { Input, InputWithAddon } from '../Input';
+import { Box, Flex } from '../Core';
+import { Text } from '../Text';
+import { Switch } from '../Switch';
+import { Select } from '../Select';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/FormField"
+  component={FormField}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# FormField
+
+A form field is used to wrap `<Input />` components. It differs from a `<Label />` in that it provides a much more
+opinionated interface to structure your form.
+
+<Preview>
+  <Story name="formfield simple">
+    <Box width="416px">
+      <FormField label="Label">
+        <Input placeholder="Channel label" />
+      </FormField>
+    </Box>
+  </Story>
+</Preview>
+
+The formfield provides various props to add labels, descriptions and tooltips.
+
+<Preview>
+  <Story name="formfield with tooltip and helper text">
+    <Box width="416px">
+      <FormField
+        label="Funding"
+        helperText="Max. available: 0.0000615 BTC"
+        tooltipContent="A connection is something"
+      >
+        <Input placeholder="Funding" />
+      </FormField>
+    </Box>
+  </Story>
+</Preview>
+
+You can do a surprising amount with just the `<Formfield />`, `<Input />` and `<Box />`.
+
+<Preview>
+  <Story name="formfield advanved">
+    <Box width="480px">
+      <FormField label="Label">
+        <Input placeholder="Channel label" />
+      </FormField>
+      <FormField label="Description">
+        <Input placeholder="Channel description" />
+      </FormField>
+      <FormField label="Connection" tooltipContent="A connection is something">
+        <Input placeholder="Paste remove conection code..." />
+      </FormField>
+      <Flex alignItems="center" mb={3}>
+        <Input placeholder="IP address..." mr={3} />
+        <Input placeholder="Port..." ml={2} />
+      </Flex>
+      <Flex alignItems="center">
+        <FormField
+          label="Funding"
+          helperText="Max. available: 0.0000615 BTC"
+          tooltipContent="This has something to do with funding"
+          sx={{ width: '50%' }}
+        >
+          <Input placeholder="Funding" width="95%" />
+        </FormField>
+        <Text sx={{ color: 'grey' }}> = 0.025 BTC / ~$303.98 CAD</Text>
+      </Flex>
+      <Flex alignItems="center">
+        <FormField
+          label="Opening fees"
+          tooltipContent="This has something to do with opening fees"
+          sx={{ width: '33.3333%' }}
+        >
+          <Select>
+            <option>Custom</option>
+          </Select>
+        </FormField>
+        <FormField sx={{ width: '33.3333%' }}>
+          <InputWithAddon
+            defaultValue="1"
+            addonRight="sats per byte"
+            ml={2}
+            width="35%"
+            addonSxRight={{ width: '65%' }}
+          />
+        </FormField>
+        <Flex width={1 / 3} justifyContent="space-around">
+          <Text sx={{ fontSize: 'small', color: 'grey' }}>~0.02 CAD</Text>
+          <Text sx={{ fontSize: 'small', color: 'grey' }}>RBF?</Text>
+          <Switch />
+        </Flex>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={FormField} />

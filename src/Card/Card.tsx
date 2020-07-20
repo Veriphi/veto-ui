@@ -5,7 +5,7 @@ interface Props extends BoxProps {
   variant?: 'primary' | 'normal' | 'inset';
 }
 
-const Card = styled(Box)<Props>();
+export const Card = styled(Box)<Props>();
 Card.defaultProps = {
   __css: {
     px: 8,
@@ -15,5 +15,3 @@ Card.defaultProps = {
   variant: 'normal',
   tx: 'cards',
 };
-
-export { Card };

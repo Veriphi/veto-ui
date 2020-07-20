@@ -188,10 +188,10 @@ export default {
   },
   tooltips: {
     normal: {
-      background: 'greyDark',
+      backgroundColor: 'greyDark',
       color: '#fff',
       '.veto-tooltip-arrow::after, .veto-tooltip-arrow::before': {
-        background: 'greyDark',
+        backgroundColor: 'greyDark',
       },
     },
   },

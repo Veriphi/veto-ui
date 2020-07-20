@@ -1,0 +1,24 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Switch } from './Switch';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Basics/Switch"
+  component={Switch}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Switch
+
+The `<Switch />` is basically a pre-styled basic `<input type="checkbox" />`.
+It has all the same properties as the native component.
+
+<Preview>
+  <Story name="switch">
+    <Switch />
+  </Story>
+</Preview>
