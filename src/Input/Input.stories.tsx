@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Input, InputWithAddon } from '.';
+import { Box } from '../Core';
 
 export default {
   title: 'Input',
@@ -66,5 +67,19 @@ export const inputWithAddon = () => (
       placeholder="This is a good old textfield"
       addonLeft="sats"
     />
+  </div>
+);
+
+export const inputWithAddonAndNumbers = () => (
+  <div>
+    <h2>Input Element</h2>
+    <Box sx={{ width: '20%' }}>
+      <InputWithAddon
+        placeholder="This is a good old textfield"
+        type="number"
+        addonRight="CAD"
+        addonLeft="$"
+      />
+    </Box>
   </div>
 );
