@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 // @TODO: Alert should be able to support icons
 interface Props extends BoxProps {}
-const Alert = styled(Box)<Props>();
+export const Alert = styled(Box)<Props>();
 Alert.defaultProps = {
   __css: {
     background: '#FCECF0',
@@ -14,5 +14,3 @@ Alert.defaultProps = {
     borderRadius: 'radius-2',
   },
 };
-
-export { Alert };

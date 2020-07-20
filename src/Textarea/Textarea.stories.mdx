@@ -1,0 +1,24 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Textarea } from './Textarea';
+import { Box } from '../Core';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Basics/Textarea"
+  component={Textarea}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Textarea
+
+The `<Textarea />` is basically a pre-styled basic `<textarea />`. It has all the same properties as the native component
+
+<Preview>
+  <Story name="textarea">
+    <Textarea />
+  </Story>
+</Preview>

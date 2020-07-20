@@ -8,8 +8,18 @@ import { useToggle } from '../hooks';
 const MenuExpansionContext = React.createContext({ isExpanded: false });
 
 interface MainNavProps {
+  /**
+   * An array of navigation elements.
+   *
+   * Please use the accompanying `<NavigationElement />` component in order to ensure
+   * proper styling of the `<MainNav />`.
+   */
   navigations: React.ReactNode[];
 }
+/**
+ * Main navigation of a site. Ideally, only one should be used per application.
+ * You would ideally wrap your application layout with the MainNav.
+ */
 const MainNav: React.FC<MainNavProps> = ({ navigations, children }) => {
   const { toggle, isActive: isExpanded } = useToggle();
 

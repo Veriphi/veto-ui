@@ -1,0 +1,27 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Select } from './Select';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Basics/Select"
+  component={Select}
+  parameters={{
+    docs: {
+      container: DocsContainer,
+    },
+  }}
+/>
+
+# Select
+
+The `<Select />` is basically a pre-styled basic `<select />`. It has all the same properties as the native component
+
+<Preview>
+  <Story name="select">
+    <Select>
+      <option>Lion</option>
+      <option>Tiger</option>
+      <option>Bear</option>
+    </Select>
+  </Story>
+</Preview>
