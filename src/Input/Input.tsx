@@ -54,9 +54,10 @@ const InputWithAddon: React.FC<InputWithAddonProps> = ({
   ...restProps
 }) => {
   return (
-    <Flex alignItems="center">
+    <Flex>
       {addonLeft && (
         <Box
+          as="span"
           tx="inputs"
           variant={variant}
           sx={{
@@ -87,6 +88,7 @@ const InputWithAddon: React.FC<InputWithAddonProps> = ({
       />
       {addonRight && (
         <Box
+          as="span"
           tx="inputs"
           variant={variant}
           sx={{
