@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 import { useTheme } from 'emotion-theming';
 import css, { get, SystemStyleObject, CSSObject } from '@styled-system/css';
 import { modalStyles } from '../Modal/modal.styles';
@@ -64,6 +64,7 @@ export interface BoxProps
 }
 type CssFunctionType = { css?: CSSObject; theme?: any };
 
+// @ts-ignore
 const Box = styled('div', {
   shouldForwardProp,
 })<BoxProps>(
