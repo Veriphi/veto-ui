@@ -1,7 +1,7 @@
 {
   "name": "@veriphi/veto-ui",
   "private": false,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "license": "MIT",
   "homepage": "https://github.com/Veriphi/veto-ui",
   "main": "dist/index.js",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.1.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
@@ -36,7 +37,6 @@
     "@types/react-dom": "^16.9.5",
     "babel-loader": "^8.2.2",
     "chromatic": "^4.0.2",
-    "@emotion/react": "^11.1.5",
     "husky": "^4.2.1",
     "react": "^16.12.0",
     "react-docgen-typescript-loader": "^3.7.2",
@@ -49,10 +49,10 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
+    "@emotion/react": ">=11.1.5",
     "@fortawesome/fontawesome-svg-core": ">=1",
     "@fortawesome/free-solid-svg-icons": ">=5",
     "@fortawesome/react-fontawesome": ">=0.1",
-    "@emotion/react": ">=11.1.5",
     "react": ">=16"
   },
   "husky": {
