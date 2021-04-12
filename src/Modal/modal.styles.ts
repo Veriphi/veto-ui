@@ -1,4 +1,4 @@
-import { keyframes, CSSObject } from '@emotion/core';
+import { keyframes, CSSObject } from '@emotion/react';
 
 const showKeyframe = keyframes`
  from {
